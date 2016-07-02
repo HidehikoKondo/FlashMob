@@ -12,6 +12,7 @@
 @interface InterfaceController()
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *messageLabel;
 @property (nonatomic) double xPos;
+@property (nonatomic) double maxAcceleration;
 
 @end
 
@@ -63,16 +64,36 @@
             double zac = data.acceleration.z;
             
             
-            if((xac - _xPos) > 0.5f || (xac - _xPos) < -0.5f){
-                NSLog(@"---SWING!!---");
-                [self submit:@"SWING"];
+            
+            //加速度の最大値を保存
+            double sabun = (xac - _xPos);
+            
+            if (sabun < 0){
+                sabun = sabun * -1;
             }
+//            NSLog(@"%f", sabun);
+
+            
+            if(_maxAcceleration < sabun){
+                NSLog(@"---加速度最大値更新!!!!---");
+                _maxAcceleration = sabun;
+                NSLog(@"%f", _maxAcceleration);
+            }
+            
+            
+            
+            
+            
+//            if((xac - _xPos) > 0.5f || (xac - _xPos) < -0.5f){
+//
+//                [self submit:@"SWING"];
+//            }
             
             
             self.xPos = xac;
             
             // 画面に表示
-            NSLog([NSString stringWithFormat:@"x: %0.3f", _xPos]);
+            //NSLog([NSString stringWithFormat:@"x: %0.3f", _xPos]);
             
             //NSLog([NSString stringWithFormat:@"x: %0.3f", xac]);
             //NSLog([NSString stringWithFormat:@"y: %0.3f", yac]);
@@ -133,34 +154,8 @@
         [_messageLabel setText:[message objectForKey:@"message"]];
         
         
-        // 4番だったら音声入力モードにする
-        if([[message objectForKey:@"message"] isEqualToString:@"4"]){
-            //音声入力モードにする
-            NSArray* suggestions = @[@"こんにちは",@"ハロー",@"グーテンモルゲン"];
-            [self presentTextInputControllerWithSuggestions:nil
-                                           allowedInputMode:WKTextInputModePlain
-                                                 completion:^(NSArray *results) {
-                                                     //音声入力
-                                                     if (results && results.count > 0) {
-                                                         id aResult = [results objectAtIndex:0];
-                                                         NSLog(@"音声入力：%@",(NSString*)aResult);
-                                                         
-                                                         if(![aResult isEqualToString:@""]){
-                                                             //実演用になんか言えば良しとする　ほんとはどうぞって言うようにしたい
-                                                             [_messageLabel setText:@"どうぞ"];
-                                                             [self submit:@"DOUZO"];
-                                                             
-                                                         }else{
-                                                             [_messageLabel setText:@"どうぞと言ってください"];
-                                                         }
-                                                     }
-                                                     else {
-                                                         // 文字が選択されていません。
-                                                     }
-                                                 }];
-            
-        }
-        
+////ここにで音声入力///
+        [self voiceInput:message];
         
     });
     
@@ -168,6 +163,47 @@
     
 }
 
+
+- (IBAction)henji {
+    NSLog(@"返事");
+    
+    [self voiceInput:NULL];
+    
+}
+
+
+-(void)voiceInput: (NSDictionary *)message{
+    
+    // 4番だったら音声入力モードにする
+//    if([[message objectForKey:@"message"] isEqualToString:@"4"]){
+        //音声入力モードにする
+        NSArray* suggestions = @[@"こんにちは",@"ハロー",@"グーテンモルゲン"];
+        [self presentTextInputControllerWithSuggestions:nil
+                                       allowedInputMode:WKTextInputModePlain
+                                             completion:^(NSArray *results) {
+                                                 //音声入力
+                                                 if (results && results.count > 0) {
+                                                     id aResult = [results objectAtIndex:0];
+                                                     NSLog(@"音声入力：%@",(NSString*)aResult);
+                                                     
+                                                     if(![aResult isEqualToString:@"いいえ"]){
+                                                         //いいえ以外はOKとする
+                                                         [_messageLabel setText:aResult];
+                                                         [self submit:@"REPLYOK"];
+                                                     }else{
+                                                         [_messageLabel setText:aResult];
+                                                         [self submit:@"REPLYNG"];
+                                                     }
+                                                 }
+                                                 else {
+                                                     // 文字が選択されていません。
+                                                 }
+                                             }];
+        
+//  }
+
+    
+}
 
 @end
 
