@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{2e2a61aa-c1a1-41d6-8629-70ad8909f556}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Java Source Files">
+      <UniqueIdentifier>{4dd792d3-d829-405f-8d56-4a32a95894af}</UniqueIdentifier>
+      <Extensions>*.java</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{09a202e8-3ced-4f97-8598-6fb52b0c0199}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{808287ee-f837-4ed2-b4c5-8fda79b73108}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Java Source Files\demo">
+      <UniqueIdentifier>{8326b12f-e839-4014-b353-dd33f91109c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Java Source Files\demo\android">
+      <UniqueIdentifier>{4790cf5a-41f8-415a-a932-e6656b8639f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\android">
+      <UniqueIdentifier>{b636c979-2979-4772-8c55-791ee089e2fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc\common">
+      <UniqueIdentifier>{23dab614-f642-4fc5-a25a-1f6434118a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\android">
+      <UniqueIdentifier>{7c605f4f-a0f3-4114-bb4c-1c85f115e0bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{29bfb5de-106d-411c-8fe6-3c78d47adabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Java Source Files\demo\android\basics">
+      <UniqueIdentifier>{a04d5c0d-13ad-4c66-a65c-21b26df20669}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AndroidManifest.xml" />
+    <None Include="jni\Android.mk" />
+    <None Include="jni\Application.mk" />
+    <None Include="src\demo\android\basics\BasicsActivity.java">
+      <Filter>Java Source Files\demo\android\basics</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\BasicsApplication.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Photon_lib.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\StdIO_main.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\StdIO_UIListener.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\Listener.cpp">
+      <Filter>src\android</Filter>
+    </ClCompile>
+    <ClCompile Include="jni\main.cpp">
+      <Filter>src\android</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jni\Listener.h">
+      <Filter>inc\android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\BasicsApplication.h">
+      <Filter>inc\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\Photon_lib.h">
+      <Filter>inc\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\StdIO_UIListener.h">
+      <Filter>inc\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\inc\UIListener.h">
+      <Filter>inc\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

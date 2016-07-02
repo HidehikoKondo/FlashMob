@@ -1,0 +1,38 @@
+* release_history-chat-objc.txt
+* Release history for the Exit Games Chat Objective C Client Library
+
+(C) 2004-2016 Exit Games GmbH, http://www.photonengine.com
+
+Questions? Visit:
+	http://doc.photonengine.com/en/chat
+	http://forum.photonengine.com
+
+
+*** version 4.1.1.0
+	Date: 03-16-2016
+	- fixed: a performance bottleneck on receiving very large messages
+
+
+*** version 4.0.5.0
+	Date: 12-02-2015
+	- added: EGAuthenticationValues.UserID
+	- removed: EGAuthenticationValues::initWithType()
+	- removed: EGAuthenticationValues::initWithTypeAndParameters()
+	- removed: EGAuthenticationValues::initWithTypeParametersAndData()
+	- removed: EGAuthenticationValues::initWithData()
+	- removed: EGAuthenticationValues::initWithUsernameAndToken()
+	- removed: EGAuthenticationValues::initWithUsernameTokenAndData()
+	- removed: EGAuthenticationValues::initWithParameters()
+	- removed: EGAuthenticationValues::initWithParametersAndData()
+	- added: EGAuthenticationValues::initWithAuthenticationValues()
+	- added: EGAuthenticationValues::authenticationValuesWithAuthenticationValues()
+	- added: class EGMutableAuthenticationValues
+	- removed: parameter 'username' from EGChatClient::initClient()
+	- moved: parameter 'authenticationValues' from EGChatClient::initClient() to EGChatClient::connect()
+	- changed: renamed EGChatClient.UserId to UserID and made it readonly
+	- removed: parameter 'userID' from EGChatPeer::opAuthenticateOnNameServer()
+
+
+*** version 4.0.4.0
+	Date: 08-07-2014
+	Initial Version

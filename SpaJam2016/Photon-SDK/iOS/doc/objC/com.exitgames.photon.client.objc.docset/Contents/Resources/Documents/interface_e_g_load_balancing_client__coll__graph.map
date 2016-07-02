@@ -1,0 +1,17 @@
+<map id="EGLoadBalancingClient" name="EGLoadBalancingClient">
+<area shape="rect" id="node2" href="$class_n_s_object.html" title="NSObject" alt="" coords="5,885,72,910"/>
+<area shape="rect" id="node14" href="$interface_e_g_base.html" title="EGBase" alt="" coords="151,885,212,910"/>
+<area shape="rect" id="node24" href="$interface_e_g_traffic_stats.html" title="EGTrafficStats" alt="" coords="460,1554,550,1579"/>
+<area shape="rect" id="node3" href="$protocol_e_g_photon_listener-p.html" title="\&lt;EGPhotonListener\&gt;" alt="" coords="790,47,911,72"/>
+<area shape="rect" id="node4" href="$protocol_e_g_base_listener-p.html" title="\&lt;EGBaseListener\&gt;" alt="" coords="450,47,561,72"/>
+<area shape="rect" id="node5" href="$interface_e_g_array.html" title="EGArray" alt="" coords="474,265,536,290"/>
+<area shape="rect" id="node12" href="$interface_e_g_load_balancing_mutable_room.html" title="EGLoadBalancingMutableRoom" alt="" coords="764,831,938,856"/>
+<area shape="rect" id="node6" href="$class_n_s_array.html" title="NSArray" alt="" coords="151,319,212,344"/>
+<area shape="rect" id="node10" href="$class_n_s_string.html" title="NSString" alt="" coords="149,122,213,147"/>
+<area shape="rect" id="node13" href="$interface_e_g_load_balancing_room.html" title="EGLoadBalancingRoom" alt="" coords="437,683,573,708"/>
+<area shape="rect" id="node22" href="$interface_e_g_load_balancing_mutable_player.html" title="EGLoadBalancingMutablePlayer" alt="" coords="763,573,938,598"/>
+<area shape="rect" id="node23" href="$interface_e_g_load_balancing_player.html" title="EGLoadBalancingPlayer" alt="" coords="437,578,574,603"/>
+<area shape="rect" id="node21" href="$interface_e_g_traffic_stats_game_level.html" title="EGTrafficStatsGameLevel" alt="" coords="433,1061,578,1086"/>
+<area shape="rect" id="node15" href="$class_n_s_copying-p.html" title="\&lt;NSCopying\&gt;" alt="" coords="137,502,225,527"/>
+<area shape="rect" id="node16" href="$class_n_s_secure_coding-p.html" title="\&lt;NSSecureCoding\&gt;" alt="" coords="123,618,239,643"/>
+</map>

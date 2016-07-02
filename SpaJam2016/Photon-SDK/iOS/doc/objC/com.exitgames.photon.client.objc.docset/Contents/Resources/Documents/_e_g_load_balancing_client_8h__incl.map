@@ -1,0 +1,24 @@
+<map id="EGLoadBalancingClient.h" name="EGLoadBalancingClient.h">
+<area shape="rect" id="node9" href="$_e_g_load_balancing_listener_8h.html" title="LoadBalancing&#45;objc\l/inc/EGLoadBalancingListener.h" alt="" coords="72,264,244,301"/>
+<area shape="rect" id="node15" href="$_e_g_load_balancing_peer_8h.html" title="LoadBalancing&#45;objc\l/inc/EGLoadBalancingPeer.h" alt="" coords="2053,87,2211,124"/>
+<area shape="rect" id="node43" href="$_e_g_load_balancing_room_8h.html" title="LoadBalancing&#45;objc\l/inc/EGLoadBalancingRoom.h" alt="" coords="2745,349,2908,387"/>
+<area shape="rect" id="node3" href="$_e_g_base_8h.html" title="Common&#45;objc/inc/EGBase.h" alt="" coords="2198,526,2353,551"/>
+<area shape="rect" id="node4" href="$_e_g_base_listener_8h.html" title="Common&#45;objc/inc/EGBaseListener.h" alt="" coords="1618,612,1811,636"/>
+<area shape="rect" id="node8" href="$_e_g_to_string_8h.html" title="Common&#45;objc/inc/EGToString.h" alt="" coords="1913,612,2084,636"/>
+<area shape="rect" id="node11" href="$_e_g_array_8h.html" title="Common&#45;objc/inc/EGArray.h" alt="" coords="499,441,655,466"/>
+<area shape="rect" id="node13" href="$_e_g_dictionary_8h.html" title="Common&#45;objc/inc/EGDictionary.h" alt="" coords="488,356,665,380"/>
+<area shape="rect" id="node16" href="$_e_g_photon_peer_8h.html" title="Photon&#45;objc/inc/EGPhoton\lPeer.h" alt="" coords="1665,179,1812,216"/>
+<area shape="rect" id="node41" href="$_e_g_raise_event_options_8h.html" title="LoadBalancing&#45;objc\l/inc/EGRaiseEventOptions.h" alt="" coords="1336,179,1492,216"/>
+<area shape="rect" id="node42" href="$_e_g_room_options_8h.html" title="LoadBalancing&#45;objc\l/inc/EGRoomOptions.h" alt="" coords="885,179,1015,216"/>
+<area shape="rect" id="node18" href="$_e_g_custom_type_utils_8h.html" title="Common&#45;objc/inc/EGCustom\lTypeUtils.h" alt="" coords="1888,435,2047,472"/>
+<area shape="rect" id="node20" href="$_e_g_logger_8h.html" title="Common&#45;objc/inc/EGLogger.h" alt="" coords="1486,526,1649,551"/>
+<area shape="rect" id="node21" href="$_n_s_string_09_u_t_f32_8h.html" title="Common&#45;objc/inc/NSString\l+UTF32.h" alt="" coords="1444,605,1593,643"/>
+<area shape="rect" id="node22" href="$_e_g_time_8h.html" title="Common&#45;objc/inc/EGTime.h" alt="" coords="2395,441,2549,466"/>
+<area shape="rect" id="node23" href="$_n_s_object_09_copy_deep_8h.html" title="Common&#45;objc/inc/NSObject\l+CopyDeep.h" alt="" coords="2338,264,2491,301"/>
+<area shape="rect" id="node27" href="$_e_g_operation_request_8h.html" title="Photon&#45;objc/inc/EGOperation\lRequest.h" alt="" coords="371,264,531,301"/>
+<area shape="rect" id="node28" href="$_e_g_photon_listener_8h.html" title="Photon&#45;objc/inc/EGPhoton\lListener.h" alt="" coords="770,264,917,301"/>
+<area shape="rect" id="node31" href="$_e_g_traffic_stats_8h.html" title="Photon&#45;objc/inc/EGTraffic\lStats.h" alt="" coords="2071,435,2213,472"/>
+<area shape="rect" id="node29" href="$_e_g_event_data_8h.html" title="Photon&#45;objc/inc/EGEventData.h" alt="" coords="690,356,861,380"/>
+<area shape="rect" id="node30" href="$_e_g_operation_response_8h.html" title="Photon&#45;objc/inc/EGOperation\lResponse.h" alt="" coords="887,349,1047,387"/>
+<area shape="rect" id="node44" href="$_e_g_load_balancing_player_8h.html" title="LoadBalancing&#45;objc\l/inc/EGLoadBalancingPlayer.h" alt="" coords="2744,435,2909,472"/>
+</map>

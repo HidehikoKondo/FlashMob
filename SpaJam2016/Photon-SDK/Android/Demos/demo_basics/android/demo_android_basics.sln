@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C0652AA-1364-4947-8647-978C236EA30F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demo_android_basics", "demo_android_basics.vcxproj", "{E46A2CBA-3D4A-4BC0-9641-EB552F625906}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E46A2CBA-3D4A-4BC0-9641-EB552F625906}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E46A2CBA-3D4A-4BC0-9641-EB552F625906}.Debug|Win32.Build.0 = Debug|Win32
+		{E46A2CBA-3D4A-4BC0-9641-EB552F625906}.Release|Win32.ActiveCfg = Release|Win32
+		{E46A2CBA-3D4A-4BC0-9641-EB552F625906}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

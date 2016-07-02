@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="demo_iPhone_loadBalancing_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVX-LW-OV9">
+                                <rect key="frame" x="238" y="108" width="144" height="63"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="..."/>
+                                <connections>
+                                    <action selector="onButton2:" destination="BYZ-38-t0r" eventType="touchDown" id="WbR-wM-fLe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1U-zR-QZR" userLabel="Status">
+                                <rect key="frame" x="16" y="20" width="568" height="21"/>
+                                <string key="text" base64-UTF8="YES">
+CQ
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3o-ar-oOq" userLabel="Button 1">
+                                <rect key="frame" x="229" y="37" width="163" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="...">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButton:" destination="BYZ-38-t0r" eventType="touchDown" id="t4s-v2-Q7M"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" bounces="NO" pagingEnabled="YES" indicatorStyle="black" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-ez-rml" userLabel="Log">
+                                <rect key="frame" x="16" y="238" width="568" height="327"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="z3o-ar-oOq" secondAttribute="centerX" id="Olz-it-n43"/>
+                            <constraint firstItem="C2q-ez-rml" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TBv-yY-2VN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C2q-ez-rml" secondAttribute="bottom" constant="35" id="Vk7-Pw-0Xf"/>
+                            <constraint firstAttribute="centerX" secondItem="rVX-LW-OV9" secondAttribute="centerX" id="b5Y-FM-CH1"/>
+                            <constraint firstItem="C2q-ez-rml" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eYY-72-sBT"/>
+                            <constraint firstItem="C2q-ez-rml" firstAttribute="top" secondItem="rVX-LW-OV9" secondAttribute="bottom" constant="75" id="ok2-Vz-YpZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rVX-LW-OV9" secondAttribute="trailing" constant="58" id="xWK-BD-hUO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="z3o-ar-oOq" id="Zwv-yU-Xar"/>
+                        <outlet property="button2" destination="rVX-LW-OV9" id="PvT-pr-V2t"/>
+                        <outlet property="logText" destination="C2q-ez-rml" id="sUE-Yp-210"/>
+                        <outlet property="statusLabel" destination="d1U-zR-QZR" id="rmb-rk-eTd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="123"/>
+        </scene>
+    </scenes>
+</document>

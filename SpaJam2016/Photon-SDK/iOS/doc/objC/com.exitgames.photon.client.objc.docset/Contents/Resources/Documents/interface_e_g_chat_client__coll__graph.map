@@ -1,0 +1,11 @@
+<map id="EGChatClient" name="EGChatClient">
+<area shape="rect" id="node2" href="$class_n_s_object.html" title="NSObject" alt="" coords="5,534,72,559"/>
+<area shape="rect" id="node13" href="$interface_e_g_base.html" title="EGBase" alt="" coords="148,534,209,559"/>
+<area shape="rect" id="node17" href="$interface_e_g_traffic_stats.html" title="EGTrafficStats" alt="" coords="455,901,545,926"/>
+<area shape="rect" id="node3" href="$protocol_e_g_photon_listener-p.html" title="\&lt;EGPhotonListener\&gt;" alt="" coords="440,162,560,187"/>
+<area shape="rect" id="node4" href="$protocol_e_g_base_listener-p.html" title="\&lt;EGBaseListener\&gt;" alt="" coords="123,108,234,133"/>
+<area shape="rect" id="node5" href="$interface_e_g_array.html" title="EGArray" alt="" coords="469,268,531,293"/>
+<area shape="rect" id="node6" href="$class_n_s_array.html" title="NSArray" alt="" coords="148,157,209,182"/>
+<area shape="rect" id="node10" href="$class_n_s_string.html" title="NSString" alt="" coords="147,368,211,393"/>
+<area shape="rect" id="node12" href="$interface_e_g_traffic_stats_game_level.html" title="EGTrafficStatsGameLevel" alt="" coords="428,534,572,559"/>
+</map>

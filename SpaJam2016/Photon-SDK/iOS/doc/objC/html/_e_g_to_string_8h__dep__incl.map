@@ -1,0 +1,25 @@
+<map id="EGToString.h" name="EGToString.h">
+<area shape="rect" id="node2" href="$_e_g_base_8h.html" title="EGBase.h" alt="" coords="2370,81,2440,106"/>
+<area shape="rect" id="node3" href="$_e_g_array_8h.html" title="EGArray.h" alt="" coords="2031,156,2101,180"/>
+<area shape="rect" id="node9" href="$_e_g_photon_peer_8h.html" title="EGPhotonPeer.h" alt="" coords="1469,396,1570,420"/>
+<area shape="rect" id="node45" href="$_e_g_custom_type_utils_8h.html" title="EGCustomTypeUtils.h" alt="" coords="663,230,789,255"/>
+<area shape="rect" id="node47" href="$_e_g_time_8h.html" title="EGTime.h" alt="" coords="2801,156,2869,180"/>
+<area shape="rect" id="node51" href="$_e_g_traffic_stats_8h.html" title="EGTrafficStats.h" alt="" coords="970,310,1069,335"/>
+<area shape="rect" id="node60" href="$_e_g_load_balancing_player_8h.html" title="EGLoadBalancingPlayer.h" alt="" coords="3591,396,3736,420"/>
+<area shape="rect" id="node4" href="$_e_g_dictionary_8h.html" title="EGDictionary.h" alt="" coords="1927,230,2018,255"/>
+<area shape="rect" id="node8" href="$_e_g_operation_request_8h.html" title="EGOperationRequest.h" alt="" coords="1602,310,1733,335"/>
+<area shape="rect" id="node21" href="$_e_g_chat_peer_8h.html" title="EGChatPeer.h" alt="" coords="1868,481,1957,506"/>
+<area shape="rect" id="node26" href="$_e_g_load_balancing_listener_8h.html" title="EGLoadBalancingListener.h" alt="" coords="2228,310,2381,335"/>
+<area shape="rect" id="node27" href="$_e_g_event_data_8h.html" title="EGEventData.h" alt="" coords="1620,230,1714,255"/>
+<area shape="rect" id="node31" href="$_e_g_operation_response_8h.html" title="EGOperationResponse.h" alt="" coords="1456,230,1596,255"/>
+<area shape="rect" id="node34" href="$_e_g_load_balancing_room_8h.html" title="EGLoadBalancingRoom.h" alt="" coords="3590,481,3734,506"/>
+<area shape="rect" id="node38" href="$_e_g_raise_event_options_8h.html" title="EGRaiseEventOptions.h" alt="" coords="2590,230,2726,255"/>
+<area shape="rect" id="node40" href="$_e_g_room_options_8h.html" title="EGRoomOptions.h" alt="" coords="2412,230,2522,255"/>
+<area shape="rect" id="node42" href="$_e_g_chat_channel_8h.html" title="EGChatChannel.h" alt="" coords="2044,481,2152,506"/>
+<area shape="rect" id="node43" href="$_e_g_chat_listener_8h.html" title="EGChatListener.h" alt="" coords="1814,396,1918,420"/>
+<area shape="rect" id="node10" href="$_e_g_lite_peer_8h.html" title="EGLitePeer.h" alt="" coords="1425,481,1509,506"/>
+<area shape="rect" id="node18" href="$_e_g_load_balancing_peer_8h.html" title="EGLoadBalancingPeer.h" alt="" coords="2903,481,3040,506"/>
+<area shape="rect" id="node19" href="$_e_g_load_balancing_client_8h.html" title="EGLoadBalancingClient.h" alt="" coords="3305,566,3448,591"/>
+<area shape="rect" id="node22" href="$_e_g_chat_client_8h.html" title="EGChatClient.h" alt="" coords="1781,566,1876,591"/>
+<area shape="rect" id="node28" href="$_e_g_photon_listener_8h.html" title="EGPhotonListener.h" alt="" coords="1461,310,1577,335"/>
+</map>

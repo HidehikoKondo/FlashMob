@@ -59,8 +59,8 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
-		6A748FE61D27C0D500C1CDE5 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */; };
-		6A748FE71D27C0D500C1CDE5 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */; };
+		6A748FE61D27C0D500C1CDE5 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6A748FE71D27C0D500C1CDE5 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6A748FEC1D27C0DF00C1CDE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */; };
 		6A748FEE1D27C0E900C1CDE5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FED1D27C0E900C1CDE5 /* CoreMotion.framework */; };
 		6A748FF51D27C25500C1CDE5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A748FF31D27C25500C1CDE5 /* Interface.storyboard */; };
@@ -75,6 +75,7 @@
 		6A74902B1D27C29200C1CDE5 /* InputLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A74901E1D27C29200C1CDE5 /* InputLayer.cpp */; };
 		6A74902E1D27C29200C1CDE5 /* NativeInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490261D27C29200C1CDE5 /* NativeInterface.mm */; };
 		6A74902F1D27C29200C1CDE5 /* NativeInterface_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490281D27C29200C1CDE5 /* NativeInterface_iOS.mm */; };
+		6A7490361D27D88000C1CDE5 /* NetworkLogic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490341D27D88000C1CDE5 /* NetworkLogic.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -245,6 +246,8 @@
 		6A7490281D27C29200C1CDE5 /* NativeInterface_iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeInterface_iOS.mm; sourceTree = "<group>"; };
 		6A7490291D27C29200C1CDE5 /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
 		6A7490321D27C47900C1CDE5 /* PrivateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateConfig.h; sourceTree = "<group>"; };
+		6A7490341D27D88000C1CDE5 /* NetworkLogic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkLogic.cpp; sourceTree = "<group>"; };
+		6A7490351D27D88000C1CDE5 /* NetworkLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLogic.h; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -412,6 +415,7 @@
 				6A7490321D27C47900C1CDE5 /* PrivateConfig.h */,
 				6A74901B1D27C29200C1CDE5 /* Common */,
 				6A7490201D27C29200C1CDE5 /* NativeInterface */,
+				6A7490331D27D87F00C1CDE5 /* loadBalancing */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
@@ -541,6 +545,15 @@
 				6A7490281D27C29200C1CDE5 /* NativeInterface_iOS.mm */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		6A7490331D27D87F00C1CDE5 /* loadBalancing */ = {
+			isa = PBXGroup;
+			children = (
+				6A7490341D27D88000C1CDE5 /* NetworkLogic.cpp */,
+				6A7490351D27D88000C1CDE5 /* NetworkLogic.h */,
+			);
+			path = loadBalancing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -762,6 +775,7 @@
 				6A74902A1D27C29200C1CDE5 /* CommonFunction.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				6A7490361D27D88000C1CDE5 /* NetworkLogic.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				6A74902B1D27C29200C1CDE5 /* InputLayer.cpp in Sources */,
 			);
@@ -841,13 +855,24 @@
 					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Photon-SDK/iOS",
+				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../Photon-SDK/iOS/LoadBalancing-cpp/lib",
+					"$(SRCROOT)/../Photon-SDK/iOS/Photon-cpp/lib",
+					"$(SRCROOT)/../Photon-SDK/iOS/Common-cpp/lib",
+				);
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-lPhoton-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -871,13 +896,24 @@
 					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Photon-SDK/iOS",
+				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LD_RUNPATH_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../Photon-SDK/iOS/LoadBalancing-cpp/lib",
+					"$(SRCROOT)/../Photon-SDK/iOS/Photon-cpp/lib",
+					"$(SRCROOT)/../Photon-SDK/iOS/Common-cpp/lib",
+				);
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-lPhoton-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
+					"-lLoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1191,6 +1227,7 @@
 				6A7490151D27C25600C1CDE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		6A7490171D27C25600C1CDE5 /* Build configuration list for PBXNativeTarget "SpaJam2016" */ = {
 			isa = XCConfigurationList;
@@ -1199,6 +1236,7 @@
 				6A7490191D27C25600C1CDE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SpaJam2016" */ = {
 			isa = XCConfigurationList;
