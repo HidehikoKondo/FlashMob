@@ -197,6 +197,7 @@ static AppDelegate s_sharedApplication;
 }
 
 
+#pragma mark -
 //読み上げてるメソッド
 - (void)speech:(NSString *)message
 {
@@ -204,5 +205,12 @@ static AppDelegate s_sharedApplication;
     NSString* speakingText = message;
     AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:speakingText];
     [speechSynthesizer speakUtterance:utterance];
+}
+
+
+- (Boolean)isWatchSession
+{
+    Boolean value = [[WCSession defaultSession] isReachable];
+    return value;
 }
 @end
