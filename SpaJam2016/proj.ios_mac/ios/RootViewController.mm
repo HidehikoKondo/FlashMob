@@ -27,6 +27,7 @@
 #import "cocos2d.h"
 #import "platform/ios/CCEAGLView-ios.h"
 
+
 @implementation RootViewController
 
 /*
@@ -111,4 +112,20 @@
 }
 
 
+#pragma mark -
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)heading
+{
+    // http://d.hatena.ne.jp/yoheiM/20110318
+
+    //周りの時期の影響を受けて正しい値が取得できていない
+    if (heading.headingAccuracy < 0.0f)
+    {
+        return;
+    }
+
+    //方角を取得
+    CLLocationDirection direction = (heading.trueHeading > 0) ? (heading.trueHeading) : (heading.magneticHeading);
+
+    _direction = direction;
+}
 @end

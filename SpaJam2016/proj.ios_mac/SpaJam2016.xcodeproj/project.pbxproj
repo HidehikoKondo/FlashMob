@@ -59,6 +59,22 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		6A748FE61D27C0D500C1CDE5 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */; };
+		6A748FE71D27C0D500C1CDE5 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */; };
+		6A748FEC1D27C0DF00C1CDE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */; };
+		6A748FEE1D27C0E900C1CDE5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FED1D27C0E900C1CDE5 /* CoreMotion.framework */; };
+		6A748FF51D27C25500C1CDE5 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A748FF31D27C25500C1CDE5 /* Interface.storyboard */; };
+		6A748FF71D27C25500C1CDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A748FF61D27C25500C1CDE5 /* Assets.xcassets */; };
+		6A748FFE1D27C25500C1CDE5 /* SpaJam2016 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6A748FFD1D27C25500C1CDE5 /* SpaJam2016 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6A7490061D27C25600C1CDE5 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490051D27C25600C1CDE5 /* InterfaceController.m */; };
+		6A7490091D27C25600C1CDE5 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490081D27C25600C1CDE5 /* ExtensionDelegate.m */; };
+		6A74900C1D27C25600C1CDE5 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A74900B1D27C25600C1CDE5 /* NotificationController.m */; };
+		6A74900E1D27C25600C1CDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A74900D1D27C25600C1CDE5 /* Assets.xcassets */; };
+		6A7490121D27C25600C1CDE5 /* SpaJam2016.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6A748FF11D27C25500C1CDE5 /* SpaJam2016.app */; };
+		6A74902A1D27C29200C1CDE5 /* CommonFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A74901C1D27C29200C1CDE5 /* CommonFunction.cpp */; };
+		6A74902B1D27C29200C1CDE5 /* InputLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A74901E1D27C29200C1CDE5 /* InputLayer.cpp */; };
+		6A74902E1D27C29200C1CDE5 /* NativeInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490261D27C29200C1CDE5 /* NativeInterface.mm */; };
+		6A74902F1D27C29200C1CDE5 /* NativeInterface_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490281D27C29200C1CDE5 /* NativeInterface_iOS.mm */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -100,7 +116,53 @@
 			remoteGlobalIDString = A07A4C241783777C0073F6A7;
 			remoteInfo = "cocos2dx iOS";
 		};
+		6A748FE91D27C0D600C1CDE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 507B40FD1C31BDD30067B53E;
+			remoteInfo = "libcocos2d tvOS";
+		};
+		6A748FFF1D27C25500C1CDE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A748FFC1D27C25500C1CDE5;
+			remoteInfo = "SpaJam2016 Extension";
+		};
+		6A7490101D27C25600C1CDE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A748FF01D27C25500C1CDE5;
+			remoteInfo = SpaJam2016;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A7490161D27C25600C1CDE5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6A748FFE1D27C25500C1CDE5 /* SpaJam2016 Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A74901A1D27C25600C1CDE5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6A7490121D27C25600C1CDE5 /* SpaJam2016.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
@@ -153,6 +215,36 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
+		6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		6A748FED1D27C0E900C1CDE5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		6A748FF11D27C25500C1CDE5 /* SpaJam2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaJam2016.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A748FF41D27C25500C1CDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		6A748FF61D27C25500C1CDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A748FF81D27C25500C1CDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A748FFD1D27C25500C1CDE5 /* SpaJam2016 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SpaJam2016 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7490031D27C25600C1CDE5 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		6A7490041D27C25600C1CDE5 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		6A7490051D27C25600C1CDE5 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		6A7490071D27C25600C1CDE5 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		6A7490081D27C25600C1CDE5 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		6A74900A1D27C25600C1CDE5 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		6A74900B1D27C25600C1CDE5 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		6A74900D1D27C25600C1CDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A74900F1D27C25600C1CDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A74901C1D27C29200C1CDE5 /* CommonFunction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommonFunction.cpp; sourceTree = "<group>"; };
+		6A74901D1D27C29200C1CDE5 /* CommonFunction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommonFunction.hpp; sourceTree = "<group>"; };
+		6A74901E1D27C29200C1CDE5 /* InputLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputLayer.cpp; sourceTree = "<group>"; };
+		6A74901F1D27C29200C1CDE5 /* InputLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InputLayer.hpp; sourceTree = "<group>"; };
+		6A7490221D27C29200C1CDE5 /* NativeInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeInterface.cpp; sourceTree = "<group>"; };
+		6A7490231D27C29200C1CDE5 /* NativeInterface_Jni.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeInterface_Jni.cpp; sourceTree = "<group>"; };
+		6A7490241D27C29200C1CDE5 /* NativeInterface_Jni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface_Jni.h; sourceTree = "<group>"; };
+		6A7490261D27C29200C1CDE5 /* NativeInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeInterface.mm; sourceTree = "<group>"; };
+		6A7490271D27C29200C1CDE5 /* NativeInterface_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface_iOS.h; sourceTree = "<group>"; };
+		6A7490281D27C29200C1CDE5 /* NativeInterface_iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeInterface_iOS.mm; sourceTree = "<group>"; };
+		6A7490291D27C29200C1CDE5 /* NativeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterface.h; sourceTree = "<group>"; };
+		6A7490321D27C47900C1CDE5 /* PrivateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateConfig.h; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -170,6 +262,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A748FEE1D27C0E900C1CDE5 /* CoreMotion.framework in Frameworks */,
+				6A748FEC1D27C0DF00C1CDE5 /* CoreLocation.framework in Frameworks */,
+				6A748FE61D27C0D500C1CDE5 /* WatchConnectivity.framework in Frameworks */,
+				6A748FE71D27C0D500C1CDE5 /* WatchKit.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
@@ -205,6 +301,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A748FFA1D27C25500C1CDE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -228,6 +331,8 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* SpaJam2016-mobile.app */,
 				5087E76F17EB910900C73F5D /* SpaJam2016-desktop.app */,
+				6A748FF11D27C25500C1CDE5 /* SpaJam2016.app */,
+				6A748FFD1D27C25500C1CDE5 /* SpaJam2016 Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,6 +342,7 @@
 			children = (
 				1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */,
 				1AC6FB07180E9839004C840B /* libcocos2d iOS.a */,
+				6A748FEA1D27C0D600C1CDE5 /* libcocos2d tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +353,8 @@
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
+				6A748FF21D27C25500C1CDE5 /* SpaJam2016 */,
+				6A7490011D27C25500C1CDE5 /* SpaJam2016 Extension */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				080E96DDFE201D6D7F000001 /* ios */,
 				503AE10617EB990700D1A890 /* mac */,
@@ -258,6 +366,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A748FED1D27C0E900C1CDE5 /* CoreMotion.framework */,
+				6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */,
+				6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */,
+				6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */,
 				ED545A7D1B68A1FA00C3958E /* libiconv.dylib */,
 				ED545A7B1B68A1F400C3958E /* libiconv.dylib */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
@@ -297,6 +409,9 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6A7490321D27C47900C1CDE5 /* PrivateConfig.h */,
+				6A74901B1D27C29200C1CDE5 /* Common */,
+				6A7490201D27C29200C1CDE5 /* NativeInterface */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
@@ -353,6 +468,81 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		6A748FF21D27C25500C1CDE5 /* SpaJam2016 */ = {
+			isa = PBXGroup;
+			children = (
+				6A748FF31D27C25500C1CDE5 /* Interface.storyboard */,
+				6A748FF61D27C25500C1CDE5 /* Assets.xcassets */,
+				6A748FF81D27C25500C1CDE5 /* Info.plist */,
+			);
+			path = SpaJam2016;
+			sourceTree = "<group>";
+		};
+		6A7490011D27C25500C1CDE5 /* SpaJam2016 Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6A7490041D27C25600C1CDE5 /* InterfaceController.h */,
+				6A7490051D27C25600C1CDE5 /* InterfaceController.m */,
+				6A7490071D27C25600C1CDE5 /* ExtensionDelegate.h */,
+				6A7490081D27C25600C1CDE5 /* ExtensionDelegate.m */,
+				6A74900A1D27C25600C1CDE5 /* NotificationController.h */,
+				6A74900B1D27C25600C1CDE5 /* NotificationController.m */,
+				6A74900D1D27C25600C1CDE5 /* Assets.xcassets */,
+				6A74900F1D27C25600C1CDE5 /* Info.plist */,
+				6A7490021D27C25600C1CDE5 /* Supporting Files */,
+			);
+			path = "SpaJam2016 Extension";
+			sourceTree = "<group>";
+		};
+		6A7490021D27C25600C1CDE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A7490031D27C25600C1CDE5 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A74901B1D27C29200C1CDE5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6A74901C1D27C29200C1CDE5 /* CommonFunction.cpp */,
+				6A74901D1D27C29200C1CDE5 /* CommonFunction.hpp */,
+				6A74901E1D27C29200C1CDE5 /* InputLayer.cpp */,
+				6A74901F1D27C29200C1CDE5 /* InputLayer.hpp */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6A7490201D27C29200C1CDE5 /* NativeInterface */ = {
+			isa = PBXGroup;
+			children = (
+				6A7490211D27C29200C1CDE5 /* Android */,
+				6A7490251D27C29200C1CDE5 /* iOS */,
+				6A7490291D27C29200C1CDE5 /* NativeInterface.h */,
+			);
+			path = NativeInterface;
+			sourceTree = "<group>";
+		};
+		6A7490211D27C29200C1CDE5 /* Android */ = {
+			isa = PBXGroup;
+			children = (
+				6A7490221D27C29200C1CDE5 /* NativeInterface.cpp */,
+				6A7490231D27C29200C1CDE5 /* NativeInterface_Jni.cpp */,
+				6A7490241D27C29200C1CDE5 /* NativeInterface_Jni.h */,
+			);
+			path = Android;
+			sourceTree = "<group>";
+		};
+		6A7490251D27C29200C1CDE5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6A7490261D27C29200C1CDE5 /* NativeInterface.mm */,
+				6A7490271D27C29200C1CDE5 /* NativeInterface_iOS.h */,
+				6A7490281D27C29200C1CDE5 /* NativeInterface_iOS.mm */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,11 +553,13 @@
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				6A74901A1D27C25600C1CDE5 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				1AC6FB25180E99E1004C840B /* PBXTargetDependency */,
+				6A7490111D27C25600C1CDE5 /* PBXTargetDependency */,
 			);
 			name = "SpaJam2016-mobile";
 			productName = iphone;
@@ -392,6 +584,40 @@
 			productReference = 5087E76F17EB910900C73F5D /* SpaJam2016-desktop.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6A748FF01D27C25500C1CDE5 /* SpaJam2016 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A7490171D27C25600C1CDE5 /* Build configuration list for PBXNativeTarget "SpaJam2016" */;
+			buildPhases = (
+				6A748FEF1D27C25500C1CDE5 /* Resources */,
+				6A7490161D27C25600C1CDE5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A7490001D27C25500C1CDE5 /* PBXTargetDependency */,
+			);
+			name = SpaJam2016;
+			productName = SpaJam2016;
+			productReference = 6A748FF11D27C25500C1CDE5 /* SpaJam2016.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		6A748FFC1D27C25500C1CDE5 /* SpaJam2016 Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A7490131D27C25600C1CDE5 /* Build configuration list for PBXNativeTarget "SpaJam2016 Extension" */;
+			buildPhases = (
+				6A748FF91D27C25500C1CDE5 /* Sources */,
+				6A748FFA1D27C25500C1CDE5 /* Frameworks */,
+				6A748FFB1D27C25500C1CDE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpaJam2016 Extension";
+			productName = "SpaJam2016 Extension";
+			productReference = 6A748FFD1D27C25500C1CDE5 /* SpaJam2016 Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -399,6 +625,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					6A748FF01D27C25500C1CDE5 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					6A748FFC1D27C25500C1CDE5 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SpaJam2016" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -409,6 +643,7 @@
 				Japanese,
 				French,
 				German,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -422,6 +657,8 @@
 			targets = (
 				1D6058900D05DD3D006BFB54 /* SpaJam2016-mobile */,
 				5087E73D17EB910900C73F5D /* SpaJam2016-desktop */,
+				6A748FF01D27C25500C1CDE5 /* SpaJam2016 */,
+				6A748FFC1D27C25500C1CDE5 /* SpaJam2016 Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -439,6 +676,13 @@
 			fileType = archive.ar;
 			path = "libcocos2d iOS.a";
 			remoteRef = 1AC6FB06180E9839004C840B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6A748FEA1D27C0D600C1CDE5 /* libcocos2d tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libcocos2d tvOS.a";
+			remoteRef = 6A748FE91D27C0D600C1CDE5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -487,6 +731,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A748FEF1D27C25500C1CDE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A748FF71D27C25500C1CDE5 /* Assets.xcassets in Resources */,
+				6A748FF51D27C25500C1CDE5 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A748FFB1D27C25500C1CDE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A74900E1D27C25600C1CDE5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -495,10 +756,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				6A74902E1D27C29200C1CDE5 /* NativeInterface.mm in Sources */,
+				6A74902F1D27C29200C1CDE5 /* NativeInterface_iOS.mm in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				6A74902A1D27C29200C1CDE5 /* CommonFunction.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				6A74902B1D27C29200C1CDE5 /* InputLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +774,16 @@
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A748FF91D27C25500C1CDE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A7490091D27C25600C1CDE5 /* ExtensionDelegate.m in Sources */,
+				6A7490061D27C25600C1CDE5 /* InterfaceController.m in Sources */,
+				6A74900C1D27C25600C1CDE5 /* NotificationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +800,28 @@
 			name = "cocos2dx iOS";
 			targetProxy = 1AC6FB24180E99E1004C840B /* PBXContainerItemProxy */;
 		};
+		6A7490001D27C25500C1CDE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A748FFC1D27C25500C1CDE5 /* SpaJam2016 Extension */;
+			targetProxy = 6A748FFF1D27C25500C1CDE5 /* PBXContainerItemProxy */;
+		};
+		6A7490111D27C25600C1CDE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A748FF01D27C25500C1CDE5 /* SpaJam2016 */;
+			targetProxy = 6A7490101D27C25600C1CDE5 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6A748FF31D27C25500C1CDE5 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A748FF41D27C25500C1CDE5 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -650,6 +946,174 @@
 			};
 			name = Release;
 		};
+		6A7490141D27C25600C1CDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SpaJam2016 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UdonkoApps.SpaJam2016.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		6A7490151D27C25600C1CDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SpaJam2016 Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UdonkoApps.SpaJam2016.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		6A7490181D27C25600C1CDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IBSC_MODULE = SpaJam2016_Extension;
+				INFOPLIST_FILE = SpaJam2016/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UdonkoApps.SpaJam2016.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		6A7490191D27C25600C1CDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IBSC_MODULE = SpaJam2016_Extension;
+				INFOPLIST_FILE = SpaJam2016/Info.plist;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.UdonkoApps.SpaJam2016.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -719,6 +1183,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
+		};
+		6A7490131D27C25600C1CDE5 /* Build configuration list for PBXNativeTarget "SpaJam2016 Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7490141D27C25600C1CDE5 /* Debug */,
+				6A7490151D27C25600C1CDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6A7490171D27C25600C1CDE5 /* Build configuration list for PBXNativeTarget "SpaJam2016" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7490181D27C25600C1CDE5 /* Debug */,
+				6A7490191D27C25600C1CDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SpaJam2016" */ = {
 			isa = XCConfigurationList;

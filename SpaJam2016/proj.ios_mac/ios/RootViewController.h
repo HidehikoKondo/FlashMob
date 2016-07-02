@@ -25,10 +25,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import <CoreLocation/CoreLocation.h>
 
-@interface RootViewController : UIViewController {
 
+@interface RootViewController : UIViewController <CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
 }
+
 - (BOOL) prefersStatusBarHidden;
+
+@property (readonly) float direction;
 
 @end
