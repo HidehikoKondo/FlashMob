@@ -4,6 +4,7 @@
 
 USING_NS_CC;
 
+
 #pragma mark -
 HelloWorld::HelloWorld()
 {

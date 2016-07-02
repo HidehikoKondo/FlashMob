@@ -65,4 +65,18 @@
     }
 }
 
+//Apple Watchにつないでいるかどうか
++ (Boolean) isWatchSession
+{
+    auto result = false;
+
+    AppController *appController = (AppController *)[UIApplication sharedApplication].delegate;
+    if (appController)
+    {
+        result = [appController isWatchSession];
+    }
+
+    return result;
+}
+
 @end

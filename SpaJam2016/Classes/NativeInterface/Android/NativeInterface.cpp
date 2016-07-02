@@ -44,4 +44,10 @@ namespace cocos2dExt
     {
         speechJni(message.c_str());
     }
+
+    //Apple Watchにつないでいるかどうか
+    bool isWatchSession()
+    {
+        return false;
+    }
 };

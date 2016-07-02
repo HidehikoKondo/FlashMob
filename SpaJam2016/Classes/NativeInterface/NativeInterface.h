@@ -35,6 +35,9 @@ namespace cocos2dExt
 
         //読み上げてるメソッド
         static void speech(const std::string &message);
+
+        //Apple Watchにつないでいるかどうか
+        static bool isWatchSession();
     };
 };
 #endif

@@ -44,4 +44,10 @@ namespace cocos2dExt
     {
         [NativeInterface_iOS speech:[NSString stringWithUTF8String:message.c_str()]];
     }
+
+    //Apple Watchにつないでいるかどうか
+    bool NativeInterface::isWatchSession()
+    {
+        return [NativeInterface_iOS isWatchSession];
+    }
 };

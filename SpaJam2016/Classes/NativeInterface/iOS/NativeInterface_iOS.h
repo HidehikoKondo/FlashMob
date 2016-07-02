@@ -31,4 +31,7 @@
 //読み上げてるメソッド
 + (void)speech:(NSString *)message;
 
+//Apple Watchにつないでいるかどうか
++ (Boolean) isWatchSession;
+
 @end

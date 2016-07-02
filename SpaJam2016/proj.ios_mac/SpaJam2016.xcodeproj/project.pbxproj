@@ -59,6 +59,10 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		6A3FD6A11D28330500D5766B /* ModalLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3FD69F1D28330500D5766B /* ModalLayer.cpp */; };
+		6A3FD6A51D28379F00D5766B /* ReplyLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3FD6A31D28379F00D5766B /* ReplyLayer.cpp */; };
+		6A3FD6A91D283C7C00D5766B /* MobLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3FD6A71D283C7C00D5766B /* MobLayer.cpp */; };
+		6A3FD6AF1D2856DF00D5766B /* PhotonScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3FD6AD1D2856DF00D5766B /* PhotonScene.cpp */; };
 		6A748FE61D27C0D500C1CDE5 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6A748FE71D27C0D500C1CDE5 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6A748FEC1D27C0DF00C1CDE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */; };
@@ -216,6 +220,14 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		6A3FD69F1D28330500D5766B /* ModalLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModalLayer.cpp; sourceTree = "<group>"; };
+		6A3FD6A01D28330500D5766B /* ModalLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModalLayer.hpp; sourceTree = "<group>"; };
+		6A3FD6A31D28379F00D5766B /* ReplyLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReplyLayer.cpp; sourceTree = "<group>"; };
+		6A3FD6A41D28379F00D5766B /* ReplyLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ReplyLayer.hpp; sourceTree = "<group>"; };
+		6A3FD6A71D283C7C00D5766B /* MobLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MobLayer.cpp; sourceTree = "<group>"; };
+		6A3FD6A81D283C7C00D5766B /* MobLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MobLayer.hpp; sourceTree = "<group>"; };
+		6A3FD6AD1D2856DF00D5766B /* PhotonScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhotonScene.cpp; sourceTree = "<group>"; };
+		6A3FD6AE1D2856DF00D5766B /* PhotonScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PhotonScene.hpp; sourceTree = "<group>"; };
 		6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
@@ -420,6 +432,14 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				6A3FD69F1D28330500D5766B /* ModalLayer.cpp */,
+				6A3FD6A01D28330500D5766B /* ModalLayer.hpp */,
+				6A3FD6A71D283C7C00D5766B /* MobLayer.cpp */,
+				6A3FD6A81D283C7C00D5766B /* MobLayer.hpp */,
+				6A3FD6A31D28379F00D5766B /* ReplyLayer.cpp */,
+				6A3FD6A41D28379F00D5766B /* ReplyLayer.hpp */,
+				6A3FD6AD1D2856DF00D5766B /* PhotonScene.cpp */,
+				6A3FD6AE1D2856DF00D5766B /* PhotonScene.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -769,13 +789,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				6A3FD6A51D28379F00D5766B /* ReplyLayer.cpp in Sources */,
+				6A3FD6AF1D2856DF00D5766B /* PhotonScene.cpp in Sources */,
 				6A74902E1D27C29200C1CDE5 /* NativeInterface.mm in Sources */,
+				6A3FD6A91D283C7C00D5766B /* MobLayer.cpp in Sources */,
 				6A74902F1D27C29200C1CDE5 /* NativeInterface_iOS.mm in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				6A74902A1D27C29200C1CDE5 /* CommonFunction.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				6A7490361D27D88000C1CDE5 /* NetworkLogic.cpp in Sources */,
+				6A3FD6A11D28330500D5766B /* ModalLayer.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				6A74902B1D27C29200C1CDE5 /* InputLayer.cpp in Sources */,
 			);

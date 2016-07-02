@@ -1,7 +1,12 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
 
 #include "audio/include/SimpleAudioEngine.h"
+
+
+//#include "HelloWorldScene.h"
+#include "NativeInterface.h"
+#include "MobLayer.hpp"
+#include "ReplyLayer.hpp"
 
 
 USING_NS_CC;
@@ -121,11 +126,24 @@ bool AppDelegate::applicationDidFinishLaunching()
         simpleAudio->preloadEffect("shakashaka.mp3");
     }
 
-    // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
 
-    // run
-    director->runWithScene(scene);
+    // create a scene. it's an autorelease object
+    Scene * scene = nullptr;
+    if (cocos2dExt::NativeInterface::isWatchSession())
+    {
+        //仮
+        scene = ReplyLayer::createScene();
+    }
+    else
+    {
+        scene = MobLayer::createScene();
+    }
+
+    if (scene)
+    {
+        // run
+        director->runWithScene(scene);
+    }
 
     return true;
 }
