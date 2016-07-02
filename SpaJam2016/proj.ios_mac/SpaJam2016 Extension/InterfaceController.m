@@ -13,6 +13,8 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *messageLabel;
 @property (nonatomic) double xPos;
 @property (nonatomic) double maxAcceleration;
+@property (nonatomic) int maxHeartRate;
+
 
 @end
 
@@ -23,7 +25,7 @@
 
 - (void)awakeWithContext:(id)context {
     
-    
+    _maxHeartRate = 0;
     self.xPos = 0;
     
     [super awakeWithContext:context];
@@ -46,9 +48,40 @@
     [motionManager startAccelerometerUpdates];
     [self setupAccelerometer];
     
+    
+
+    
+    // タイマーの生成例
+    NSTimer *tm = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                                   target:self
+                                                 selector:@selector(random:)
+                                                 userInfo:nil
+                                                  repeats:YES];
+    
+    
+    
     [super willActivate];
 }
 
+
+- (void)random:(NSTimer*)timer{
+    
+    int rand;
+    NSLog(@"%d", 70+arc4random()%60 );
+    rand = 70+arc4random()%60;
+    
+    
+    if (_maxHeartRate < rand){
+        _maxHeartRate = rand;
+    }
+    
+    [_messageLabel setText:[NSString stringWithFormat:@"MAX心拍数:%d", _maxHeartRate]];
+    
+    
+    //rand = 50+arc4random()% 60;
+    
+    //return rand;
+}
 
 - (void)setupAccelerometer{
     if (motionManager.accelerometerAvailable){
