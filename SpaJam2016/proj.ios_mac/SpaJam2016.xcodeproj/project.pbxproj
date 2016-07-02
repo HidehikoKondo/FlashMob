@@ -63,6 +63,7 @@
 		6A3FD6A51D28379F00D5766B /* ReplyLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3FD6A31D28379F00D5766B /* ReplyLayer.cpp */; };
 		6A3FD6A91D283C7C00D5766B /* MobLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3FD6A71D283C7C00D5766B /* MobLayer.cpp */; };
 		6A3FD6AF1D2856DF00D5766B /* PhotonScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3FD6AD1D2856DF00D5766B /* PhotonScene.cpp */; };
+		6A3FD6B51D286AE000D5766B /* RoundedBoxSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3FD6B31D286AE000D5766B /* RoundedBoxSprite.cpp */; };
 		6A748FE61D27C0D500C1CDE5 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6A748FE71D27C0D500C1CDE5 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6A748FEC1D27C0DF00C1CDE5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */; };
@@ -81,8 +82,7 @@
 		6A74902F1D27C29200C1CDE5 /* NativeInterface_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490281D27C29200C1CDE5 /* NativeInterface_iOS.mm */; };
 		6A7490361D27D88000C1CDE5 /* NetworkLogic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490341D27D88000C1CDE5 /* NetworkLogic.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
-		9EEB254A1D283E8900FED9B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEB25491D283E8900FED9B6 /* HealthKit.framework */; };
-		9EEB254C1D283E9900FED9B6 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEB254B1D283E9900FED9B6 /* HealthKitUI.framework */; };
+		9EEB254C1D283E9900FED9B6 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEB254B1D283E9900FED9B6 /* HealthKitUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -230,6 +230,9 @@
 		6A3FD6A81D283C7C00D5766B /* MobLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MobLayer.hpp; sourceTree = "<group>"; };
 		6A3FD6AD1D2856DF00D5766B /* PhotonScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhotonScene.cpp; sourceTree = "<group>"; };
 		6A3FD6AE1D2856DF00D5766B /* PhotonScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PhotonScene.hpp; sourceTree = "<group>"; };
+		6A3FD6B31D286AE000D5766B /* RoundedBoxSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoundedBoxSprite.cpp; sourceTree = "<group>"; };
+		6A3FD6B41D286AE000D5766B /* RoundedBoxSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RoundedBoxSprite.hpp; sourceTree = "<group>"; };
+		6A3FD6B61D28713A00D5766B /* SpaJam2016-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SpaJam2016-mobile.entitlements"; sourceTree = "<group>"; };
 		6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		6A748FE51D27C0D500C1CDE5 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
@@ -263,8 +266,6 @@
 		6A7490341D27D88000C1CDE5 /* NetworkLogic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkLogic.cpp; sourceTree = "<group>"; };
 		6A7490351D27D88000C1CDE5 /* NetworkLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLogic.h; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		9EEB25481D283CB100FED9B6 /* SpaJam2016-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SpaJam2016-mobile.entitlements"; sourceTree = "<group>"; };
-		9EEB25491D283E8900FED9B6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		9EEB254B1D283E9900FED9B6 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/HealthKitUI.framework; sourceTree = DEVELOPER_DIR; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -283,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EEB254C1D283E9900FED9B6 /* HealthKitUI.framework in Frameworks */,
-				9EEB254A1D283E8900FED9B6 /* HealthKit.framework in Frameworks */,
 				6A748FEE1D27C0E900C1CDE5 /* CoreMotion.framework in Frameworks */,
 				6A748FEC1D27C0DF00C1CDE5 /* CoreLocation.framework in Frameworks */,
 				6A748FE61D27C0D500C1CDE5 /* WatchConnectivity.framework in Frameworks */,
@@ -372,7 +372,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				9EEB25481D283CB100FED9B6 /* SpaJam2016-mobile.entitlements */,
+				6A3FD6B61D28713A00D5766B /* SpaJam2016-mobile.entitlements */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
@@ -390,7 +390,6 @@
 			isa = PBXGroup;
 			children = (
 				9EEB254B1D283E9900FED9B6 /* HealthKitUI.framework */,
-				9EEB25491D283E8900FED9B6 /* HealthKit.framework */,
 				6A748FED1D27C0E900C1CDE5 /* CoreMotion.framework */,
 				6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */,
 				6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */,
@@ -539,6 +538,8 @@
 		6A74901B1D27C29200C1CDE5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6A3FD6B31D286AE000D5766B /* RoundedBoxSprite.cpp */,
+				6A3FD6B41D286AE000D5766B /* RoundedBoxSprite.hpp */,
 				6A74901C1D27C29200C1CDE5 /* CommonFunction.cpp */,
 				6A74901D1D27C29200C1CDE5 /* CommonFunction.hpp */,
 				6A74901E1D27C29200C1CDE5 /* InputLayer.cpp */,
@@ -670,10 +671,10 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = 7JKB5AMAKP;
+						DevelopmentTeam = UNFXRZ4H42;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -808,6 +809,7 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				6A3FD6A51D28379F00D5766B /* ReplyLayer.cpp in Sources */,
+				6A3FD6B51D286AE000D5766B /* RoundedBoxSprite.cpp in Sources */,
 				6A3FD6AF1D2856DF00D5766B /* PhotonScene.cpp in Sources */,
 				6A74902E1D27C29200C1CDE5 /* NativeInterface.mm in Sources */,
 				6A3FD6A91D283C7C00D5766B /* MobLayer.cpp in Sources */,
@@ -884,7 +886,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_ENTITLEMENTS = "SpaJam2016-mobile.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
@@ -930,7 +931,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_ENTITLEMENTS = "SpaJam2016-mobile.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;

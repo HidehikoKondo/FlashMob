@@ -301,15 +301,13 @@ void NetworkLogic::customEventAction(int playerNr, nByte eventCode, const ExitGa
 
     switch (eventCode)
     {
-        case 1:
+        case 2:
         {
             {
                 event = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
-                float x = ExitGames::Common::ValueObject<float>(event->getValue(1)).getDataCopy();
-                float y = ExitGames::Common::ValueObject<float>(event->getValue(2)).getDataCopy();
+                int rep = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
 
-
-                std::array<float, 3> array = {static_cast<float>(playerNr), x, y};
+                std::array<int, 3> array = {playerNr, 2, rep};
                 this->eventQueue.push(array);
             }
             break;

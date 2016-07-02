@@ -129,7 +129,12 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     // create a scene. it's an autorelease object
     Scene * scene = nullptr;
-    if (cocos2dExt::NativeInterface::isWatchSession())
+
+    //ターゲット or 依頼者/協力者
+    auto flag = cocos2dExt::NativeInterface::isWatchSession();
+    flag = true;
+
+    if (flag)
     {
         //仮
         scene = ReplyLayer::createScene();

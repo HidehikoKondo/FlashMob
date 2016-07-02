@@ -13,6 +13,8 @@
 #define EVENT_NAME__ACCELERATION        "Acceleration"
 #define EVENT_NAME__TEXTFROMWATCH       "TextFromWatch"
 
+#define EVENT_NAME__PHOTON_RECIEVE      "PhotonRecived"
+
 #define SWING_COUNT (50)
 
 #endif

@@ -11,6 +11,8 @@
 #include "MobLayer.hpp"
 #include "ReplyLayer.hpp"
 
+#include "PrivateConfig.h"
+
 
 USING_NS_CC;
 
@@ -39,6 +41,32 @@ bool PhotonScene::init()
         {
             break;
         }
+
+
+        // add a label shows "Hello World"
+        // create and initialize a label
+        if (auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24))
+        {
+            label->setName("label");
+
+            auto pos = cocos2d::Point::ZERO;
+            {
+                auto labelSize = label->getContentSize();
+
+                const auto visibleSize   = Director::getInstance()->getVisibleSize();
+                const auto visibleOrigin = Director::getInstance()->getVisibleOrigin();
+
+                pos  = visibleOrigin;
+                pos += cocos2d::Point(visibleSize.width * 0.5f, visibleSize.height);
+                pos += cocos2d::Point(0.0f, -labelSize.height);
+            }
+            label->setPosition(pos);
+
+
+            // add the label as a child to this layer
+            this->addChild(label, 1);
+        }
+
 
         result = true;
     } while (0);
@@ -128,7 +156,18 @@ void PhotonScene::update(float delta)
             auto arr = logic->eventQueue.front();
             logic->eventQueue.pop();
 
+            {
+                ValueMap map;
+                {
+                    map["playerNr"] = arr[0];
+                    map["event"]    = arr[1];
+                    map["value"]    = arr[2];
+                }
 
+                auto event = EventCustom(EVENT_NAME__PHOTON_RECIEVE);
+                event.setUserData(&map);
+                this->getEventDispatcher()->dispatchEvent(&event);
+            }
 //            auto playerNr = static_cast<int>(arr[0]);
 //            auto pos = cocos2d::Point(arr[1], arr[2]);
 //            this->addParticle(playerNr, pos);

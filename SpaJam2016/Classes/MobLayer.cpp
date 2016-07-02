@@ -8,6 +8,8 @@
 
 #include "MobLayer.hpp"
 
+#include "RoundedBoxSprite.hpp"
+
 
 USING_NS_CC;
 
@@ -68,6 +70,68 @@ bool MobLayer::init()
         {
             break;
         }
+
+
+        //TEST: 角丸ボタン
+        {
+            auto sprite1 = RoundedBoxSprite::create(cocos2d::Size(300.0f, 50.0f),
+                                                   Color3B(111, 201, 88),
+                                                   10,
+                                                   30,
+                                                   "TEST 1",
+                                                   Color3B::WHITE,
+                                                   32.0f);
+
+            auto sprite2 = RoundedBoxSprite::create(cocos2d::Size(300.0f, 50.0f),
+                                                    Color3B(111 - 25, 201 - 25, 88 - 25),
+                                                    10,
+                                                    30,
+                                                    "TEST 2",
+                                                    Color3B(255 - 25, 255 - 25, 255 - 25),
+                                                    32.0f);
+
+
+            auto func = [this](Ref * pSender) {
+                //Photon
+                if (auto scene = dynamic_cast<PhotonScene *>(this->getParent()))
+                {
+                    if (auto logic = scene->getNetworkLogic())
+                    {
+                        //相手に通知
+                        {
+                            auto eventContent = new ExitGames::Common::Hashtable();
+                            {
+                                eventContent->put<int, int>(1, 999);
+
+                                logic->sendEvent(2, eventContent);
+                            }
+                            delete eventContent;
+                        }
+                    }
+                }
+            };
+
+            if (auto item = MenuItemSprite::create(sprite1, sprite2, func))
+            {
+                if (auto menu = Menu::createWithItem(item))
+                {
+                    auto pos = cocos2d::Point::ZERO;
+                    {
+                        auto visibleRect = cocos2d::Rect::ZERO;
+                        {
+                            visibleRect.origin = Director::getInstance()->getVisibleOrigin();
+                            visibleRect.size   = Director::getInstance()->getVisibleSize();
+                        }
+
+                        pos = cocos2d::Point(visibleRect.getMidX(), visibleRect.getMaxY() - 50.0f);
+                    }
+                    menu->setPosition(pos);
+
+                    this->addChild(menu, 100);
+                }
+            }
+        }
+
 
         result = true;
     } while (0);

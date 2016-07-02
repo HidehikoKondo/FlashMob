@@ -122,5 +122,5 @@ public:
     int playerNr = 0;
 
     // イベントキュー
-    std::queue<std::array<float, 3>> eventQueue;
+    std::queue<std::array<int, 3>> eventQueue;
 };
