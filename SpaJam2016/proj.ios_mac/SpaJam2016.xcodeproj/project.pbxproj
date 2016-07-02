@@ -77,6 +77,8 @@
 		6A74902F1D27C29200C1CDE5 /* NativeInterface_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490281D27C29200C1CDE5 /* NativeInterface_iOS.mm */; };
 		6A7490361D27D88000C1CDE5 /* NetworkLogic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A7490341D27D88000C1CDE5 /* NetworkLogic.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		9EEB254A1D283E8900FED9B6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEB25491D283E8900FED9B6 /* HealthKit.framework */; };
+		9EEB254C1D283E9900FED9B6 /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEB254B1D283E9900FED9B6 /* HealthKitUI.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -249,6 +251,9 @@
 		6A7490341D27D88000C1CDE5 /* NetworkLogic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkLogic.cpp; sourceTree = "<group>"; };
 		6A7490351D27D88000C1CDE5 /* NetworkLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkLogic.h; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9EEB25481D283CB100FED9B6 /* SpaJam2016-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SpaJam2016-mobile.entitlements"; sourceTree = "<group>"; };
+		9EEB25491D283E8900FED9B6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		9EEB254B1D283E9900FED9B6 /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/HealthKitUI.framework; sourceTree = DEVELOPER_DIR; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -265,6 +270,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EEB254C1D283E9900FED9B6 /* HealthKitUI.framework in Frameworks */,
+				9EEB254A1D283E8900FED9B6 /* HealthKit.framework in Frameworks */,
 				6A748FEE1D27C0E900C1CDE5 /* CoreMotion.framework in Frameworks */,
 				6A748FEC1D27C0DF00C1CDE5 /* CoreLocation.framework in Frameworks */,
 				6A748FE61D27C0D500C1CDE5 /* WatchConnectivity.framework in Frameworks */,
@@ -353,6 +360,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				9EEB25481D283CB100FED9B6 /* SpaJam2016-mobile.entitlements */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
@@ -369,6 +377,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9EEB254B1D283E9900FED9B6 /* HealthKitUI.framework */,
+				9EEB25491D283E8900FED9B6 /* HealthKit.framework */,
 				6A748FED1D27C0E900C1CDE5 /* CoreMotion.framework */,
 				6A748FEB1D27C0DF00C1CDE5 /* CoreLocation.framework */,
 				6A748FE41D27C0D500C1CDE5 /* WatchConnectivity.framework */,
@@ -639,6 +649,14 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 7JKB5AMAKP;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
 					6A748FF01D27C25500C1CDE5 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -842,7 +860,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_ENTITLEMENTS = "SpaJam2016-mobile.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -874,6 +894,7 @@
 					"-lCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
 					"-lLoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -885,7 +906,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_ENTITLEMENTS = "SpaJam2016-mobile.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -915,6 +938,7 @@
 					"-lCommon-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
 					"-lLoadBalancing-cpp_$(CONFIGURATION)_$(PLATFORM_NAME)",
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
