@@ -12,10 +12,10 @@
 USING_NS_CC;
 
 
-static cocos2d::Size designResolutionSize = cocos2d::Size( 480,  320);
-static cocos2d::Size smallResolutionSize  = cocos2d::Size( 480,  320);
-static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024,  768);
-static cocos2d::Size largeResolutionSize  = cocos2d::Size(2048, 1536);
+static cocos2d::Size designResolutionSize = cocos2d::Size( 320,  480);
+static cocos2d::Size smallResolutionSize  = cocos2d::Size( 320,  480);
+static cocos2d::Size mediumResolutionSize = cocos2d::Size( 768, 1024);
+static cocos2d::Size largeResolutionSize  = cocos2d::Size(1536, 2048);
 
 
 AppDelegate::AppDelegate()
@@ -132,15 +132,18 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     //依頼者(true) or 協力者(false)
     auto flag = cocos2dExt::NativeInterface::isWatchSession();
+
+//MEMO: FLAG CHANGE
     flag = true;
 
     if (flag)
     {
-        //仮
+        //依頼者
         scene = ReplyLayer::createScene();
     }
     else
     {
+        //協力者
         scene = MobLayer::createScene();
     }
 

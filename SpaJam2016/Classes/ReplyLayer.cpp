@@ -105,7 +105,7 @@ void ReplyLayer::onEnter()
     {
         //TEST: 角丸ボタン
         {
-            auto sprite1 = RoundedBoxSprite::create(cocos2d::Size(300.0f, 50.0f),
+            auto sprite1 = RoundedBoxSprite::create(cocos2d::Size(200.0f, 50.0f),
                                                     Color3B(111, 201, 88),
                                                     10,
                                                     30,
@@ -113,7 +113,7 @@ void ReplyLayer::onEnter()
                                                     Color3B::WHITE,
                                                     32.0f);
 
-            auto sprite2 = RoundedBoxSprite::create(cocos2d::Size(300.0f, 50.0f),
+            auto sprite2 = RoundedBoxSprite::create(cocos2d::Size(200.0f, 50.0f),
                                                     Color3B(111 - 25, 201 - 25, 88 - 25),
                                                     10,
                                                     30,
