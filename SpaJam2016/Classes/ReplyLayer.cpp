@@ -292,6 +292,26 @@ void ReplyLayer::onEnter()
                     }
                 }
 
+                //BGM
+                {
+                    const std::string bgmFile[] = {
+                        "success.mp3",
+                        "success.mp3",
+                        "fail.mp3",
+                        "fail.mp3",
+                    };
+
+                    const auto count = sizeof(bgmFile) / sizeof(*bgmFile);
+
+                    const auto index = count - 1 - rep;
+
+                    const auto name = bgmFile[index];
+                    if (name.length() > 0)
+                    {
+                        CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(name.c_str());
+                    }
+                }
+
                 //みんなに通知
                 //Photon
                 if (auto scene = dynamic_cast<PhotonScene *>(this->getParent()))
