@@ -130,7 +130,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     // create a scene. it's an autorelease object
     Scene * scene = nullptr;
 
-    //ターゲット or 依頼者/協力者
+    //依頼者(true) or 協力者(false)
     auto flag = cocos2dExt::NativeInterface::isWatchSession();
     flag = true;
 

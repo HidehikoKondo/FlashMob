@@ -124,10 +124,10 @@ void ReplyLayer::onEnter()
 
             auto func = [this, label](Ref * pSender) {
 
-                if (auto item = dynamic_cast<MenuItemSprite *>(pSender))
-                {
-                    item->setEnabled(false);
-                }
+//                if (auto item = dynamic_cast<MenuItemSprite *>(pSender))
+//                {
+//                    item->setEnabled(false);
+//                }
 
                 {
                     cocos2dExt::NativeInterface::putTextToWatch("REPLY");
@@ -136,6 +136,23 @@ void ReplyLayer::onEnter()
                     {
                         label->setString("REPLY ... ?");
                     }
+
+
+//TEST
+#if (false)
+                    {
+                        auto func = [this]() {
+                            const auto flag = false;
+                            const auto text = (flag) ? ("REPLYOK") : ("REPLYNG");
+                            cocos2dExt::NativeInterface::getTextFromWatch(text);
+                        };
+
+                        if (auto action = Sequence::create(DelayTime::create(1.0f), CallFunc::create(func), nullptr))
+                        {
+                            this->runAction(action);
+                        }
+                    }
+#endif
                 }
             };
 
