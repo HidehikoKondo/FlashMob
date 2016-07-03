@@ -12,6 +12,8 @@
 
 #include "PrivateConfig.h"
 
+#include "audio/include/SimpleAudioEngine.h"
+
 
 USING_NS_CC;
 
@@ -123,7 +125,7 @@ void MobLayer::onEnter()
                 const auto eventId = (*data)["event"].asInt();
                 const auto value   = (*data)["value"].asInt();
 
-                const auto isOK = ((eventId == 3) && (value == 1));
+                //const auto isOK = ((eventId == 3) && (value == 1));
 
                 if (label)
                 {
@@ -147,6 +149,24 @@ void MobLayer::onEnter()
                     {
                         particle->removeFromParentAndCleanup(true);
                     }
+
+
+                    //BGM
+                    {
+                        const std::string bgmFile[] = {
+                            "success.mp3",
+                            "success.mp3",
+                            "fail.mp3",
+                            "fail.mp3",
+                        };
+
+                        const auto name = bgmFile[index];
+                        if (name.length() > 0)
+                        {
+                            CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(name.c_str());
+                        }
+                    }
+
 
                     //パーティクル
                     {

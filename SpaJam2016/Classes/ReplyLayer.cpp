@@ -14,6 +14,8 @@
 
 #include "RoundedBoxSprite.hpp"
 
+#include "audio/include/SimpleAudioEngine.h"
+
 
 USING_NS_CC;
 
@@ -62,6 +64,28 @@ bool ReplyLayer::init()
         if (auto layer = LayerColor::create(color))
         {
             this->addChild(layer);
+        }
+
+        if (auto sprite = Sprite::create("ring.png"))
+        {
+            auto visibleRect = cocos2d::Rect::ZERO;
+            {
+                visibleRect.origin = Director::getInstance()->getVisibleOrigin();
+                visibleRect.size   = Director::getInstance()->getVisibleSize();
+            }
+
+            const auto pos = visibleRect.origin + visibleRect.size * 0.5f;
+            sprite->setPosition(pos);
+
+            auto rate = cocos2d::Point::ZERO;
+            {
+                const auto size = sprite->getContentSize();
+                rate = cocos2d::Point(visibleRect.size.width  / size.width,
+                                      visibleRect.size.height / size.height);
+            }
+            sprite->setScale(rate.x);
+
+            this->addChild(sprite);
         }
 
         result = true;
@@ -123,6 +147,8 @@ void ReplyLayer::onEnter()
 
 
             auto func = [this, label](Ref * pSender) {
+
+                CocosDenshion::SimpleAudioEngine::getInstance()->stopBackgroundMusic();
 
 //                if (auto item = dynamic_cast<MenuItemSprite *>(pSender))
 //                {
