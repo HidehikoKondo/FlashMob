@@ -116,8 +116,8 @@ void ReplyLayer::onEnter()
 
             auto labelSize = label->getContentSize();
 
-            pos  = visibleRect.origin + visibleRect.size * 0.5f;
-            //pos += Vec2(0.0f, -labelSize.height);
+            pos  = Vec2(visibleRect.getMidX(), visibleRect.getMaxY());
+            pos += Vec2(0.0f, -labelSize.height - 50.0f);
         }
         label->setPosition(pos);
 
@@ -133,7 +133,7 @@ void ReplyLayer::onEnter()
                                                     Color3B(111, 201, 88),
                                                     10,
                                                     30,
-                                                    "MEARRY ?",
+                                                    "願う",
                                                     Color3B::WHITE,
                                                     32.0f);
 
@@ -141,7 +141,7 @@ void ReplyLayer::onEnter()
                                                     Color3B(111 - 25, 201 - 25, 88 - 25),
                                                     10,
                                                     30,
-                                                    "MEARRY ?",
+                                                    "願う",
                                                     Color3B(255 - 25, 255 - 25, 255 - 25),
                                                     32.0f);
 
@@ -164,7 +164,7 @@ void ReplyLayer::onEnter()
                     }
 
 
-//TEST
+//MARK: TEST
 #if (false)
                     {
                         auto func = [this]() {
