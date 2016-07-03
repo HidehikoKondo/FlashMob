@@ -110,6 +110,7 @@ void MobLayer::onEnter()
         this->addChild(label, 1);
     }
 
+
     {
         auto callback = [this, label](EventCustom * event) {
 
@@ -135,8 +136,70 @@ void MobLayer::onEnter()
 
                     const auto count = sizeof(list) / sizeof(*list);
 
-                    const auto text = list[count - 1 - value];
+                    const auto index = count - 1 - value;
+
+                    const auto text = list[index];
                     label->setString(text);
+
+
+                    const auto name = "particle";
+                    if (auto particle = dynamic_cast<ParticleSystemQuad *>(this->getChildByName(name)))
+                    {
+                        particle->removeFromParentAndCleanup(true);
+                    }
+
+                    //パーティクル
+                    {
+                        const auto name = "particle";
+                        if (auto particle = dynamic_cast<ParticleSystemQuad *>(this->getChildByName(name)))
+                        {
+                            particle->removeFromParentAndCleanup(true);
+                        }
+
+                        //if (index < 2)
+                        {
+                            const std::string paticleList[] = {
+                                "Particle_5.plist",
+                                "",
+                                "",
+                                "Particle_4.plist",
+                            };
+
+
+                            const auto partileName = paticleList[index];
+                            if (partileName.length() > 0)
+                            {
+                                if (auto particle = ParticleSystemQuad::create(partileName))
+                                {
+                                    particle->setName(name);
+                                    particle->setAutoRemoveOnFinish(true);
+
+                                    auto pos = Vec2::ZERO;
+                                    {
+                                        auto visibleRect = cocos2d::Rect::ZERO;
+                                        {
+                                            visibleRect.origin = Director::getInstance()->getVisibleOrigin();
+                                            visibleRect.size   = Director::getInstance()->getVisibleSize();
+                                        }
+
+                                        if (index == 0)
+                                        {
+                                            pos = Vec2(visibleRect.getMidX(), visibleRect.getMaxY());
+                                            pos += Vec2(0.0f, 100.0f);
+                                        }
+                                        else if (index == (sizeof(paticleList)/sizeof(*paticleList) - 1))
+                                        {
+                                            pos = Vec2(visibleRect.getMidX(), visibleRect.getMidY());
+                                            //pos += Vec2(0.0f, 100.0f);
+                                        }
+                                    }
+                                    particle->setPosition(pos);
+
+                                    this->addChild(particle, 100);
+                                }
+                            }
+                        }
+                    }
 
                     //TODO: 協力者用処理
                 }

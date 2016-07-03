@@ -142,8 +142,15 @@ void ReplyLayer::onEnter()
 #if (false)
                     {
                         auto func = [this]() {
-                            const auto flag = false;
-                            const auto text = (flag) ? ("REPLYOK") : ("REPLYNG");
+                            const std::string list[] = {
+                                "REPLYOK",
+                                "REPLYGOOD",
+                                "REPLYBAD",
+                                "REPLYNG",
+                            };
+
+                            const auto index = 1;
+                            const auto text = list[index];
                             cocos2dExt::NativeInterface::getTextFromWatch(text);
                         };
 
