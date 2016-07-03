@@ -77,7 +77,7 @@ void ReplyLayer::onEnter()
     ModalLayer::onEnter();
 
 
-    auto label = Label::createWithTTF("", "fonts/Marker Felt.ttf", 24);
+    auto label = Label::createWithSystemFont("", "", 24.0f);
     if (label)
     {
         label->setName("result");

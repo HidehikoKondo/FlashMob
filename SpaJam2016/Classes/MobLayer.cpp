@@ -126,7 +126,16 @@ void MobLayer::onEnter()
 
                 if (label)
                 {
-                    const auto text = (isOK) ? ("YES !!") : ("NO !!");
+                    const std::string list[] = {
+                        "OK",
+                        "GOOD",
+                        "BAD",
+                        "NG",
+                    };
+
+                    const auto count = sizeof(list) / sizeof(*list);
+
+                    const auto text = list[count - 1 - value];
                     label->setString(text);
 
                     //TODO: 協力者用処理
