@@ -75,7 +75,7 @@
         _maxHeartRate = rand;
     }
     
-    [_messageLabel setText:[NSString stringWithFormat:@"MAX心拍数:%d", _maxHeartRate]];
+    //[_messageLabel setText:[NSString stringWithFormat:@"MAX心拍数:%d", _maxHeartRate]];
     
     
     //rand = 50+arc4random()% 60;

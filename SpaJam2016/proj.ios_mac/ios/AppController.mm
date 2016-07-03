@@ -42,6 +42,18 @@ static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
+    
+    // Do any additional setup after loading the view, typically from a nib.
+    NSDictionary *applicationDict = @{@"hoge" : @"huga"};
+    
+    if ([WCSession isSupported]) {
+        NSLog(@"通った？");
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
+    
+    
     cocos2d::Application *app = cocos2d::Application::getInstance();
     app->initGLContextAttrs();
     cocos2d::GLViewImpl::convertAttrs();
@@ -193,6 +205,8 @@ static AppDelegate s_sharedApplication;
                                        });
                                    }
          ];
+    }else{
+        NSLog(@"つながってないよ　isReachableがFalse");
     }
 }
 
