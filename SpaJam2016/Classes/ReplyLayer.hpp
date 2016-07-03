@@ -32,10 +32,6 @@ protected:
 protected:
     virtual void onEnter() override;
     virtual void onExit() override;
-
-
-protected:
-    virtual void update(float delta) override;
 };
 
 #endif

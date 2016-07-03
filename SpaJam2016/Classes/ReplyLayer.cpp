@@ -12,6 +12,8 @@
 
 #include "NativeInterface.h"
 
+#include "RoundedBoxSprite.hpp"
+
 
 USING_NS_CC;
 
@@ -74,10 +76,35 @@ void ReplyLayer::onEnter()
 {
     ModalLayer::onEnter();
 
-    //this->scheduleUpdate();
+
+    auto label = Label::createWithTTF("", "fonts/Marker Felt.ttf", 24);
+    if (label)
+    {
+        label->setName("result");
+
+        auto pos = Vec2::ZERO;
+        {
+            auto visibleRect = cocos2d::Rect::ZERO;
+            {
+                visibleRect.origin = Director::getInstance()->getVisibleOrigin();
+                visibleRect.size   = Director::getInstance()->getVisibleSize();
+            }
+
+            auto labelSize = label->getContentSize();
+
+            pos  = visibleRect.origin + visibleRect.size * 0.5f;
+            //pos += Vec2(0.0f, -labelSize.height);
+        }
+        label->setPosition(pos);
+
+
+        // add the label as a child to this layer
+        this->addChild(label, 1);
+    }
+
 
     {
-        auto callback = [this](EventCustom * event) {
+        auto callback = [this, label](EventCustom * event) {
 
             if (auto data = static_cast<ValueMap *>(event->getUserData()))
             {
@@ -90,6 +117,11 @@ void ReplyLayer::onEnter()
                 if ((eventId == 2) && (value == 999))
                 {
                     cocos2dExt::NativeInterface::putTextToWatch("REPLY");
+
+                    if (label)
+                    {
+                        label->setString("REPLY ... ?");
+                    }
                 }
             }
         };
@@ -101,19 +133,55 @@ void ReplyLayer::onEnter()
     }
 
     {
-        auto callback = [this](EventCustom * event) {
+        auto callback = [this, label](EventCustom * event) {
 
             if (auto data = static_cast<Value *>(event->getUserData()))
             {
                 const auto text = data->asString();
 
+                auto rep = 0;
                 if (text.compare("REPLYOK") == 0)
                 {
                     CCLOG("OK");
+                    rep = 1;
+
+                    if (label)
+                    {
+                        label->setString("OK");
+                    }
                 }
                 else if (text.compare("REPLYNG") == 0)
                 {
                     CCLOG("NG");
+                    rep = 0;
+
+                    if (label)
+                    {
+                        label->setString("NG");
+                    }
+                }
+                else
+                {
+                    if (label)
+                    {
+                        label->setString("ERROR ?");
+                    }
+                }
+
+                //みんなに通知
+                //Photon
+                if (auto scene = dynamic_cast<PhotonScene *>(this->getParent()))
+                {
+                    if (auto logic = scene->getNetworkLogic())
+                    {
+                        auto eventContent = new ExitGames::Common::Hashtable();
+                        {
+                            eventContent->put<int, int>(1, rep);
+
+                            logic->sendEvent(3, eventContent);
+                        }
+                        delete eventContent;
+                    }
                 }
             }
         };
@@ -131,41 +199,4 @@ void ReplyLayer::onExit()
     ModalLayer::onExit();
 
     this->unscheduleUpdate();
-}
-
-
-#pragma mark -
-void ReplyLayer::update(float delta)
-{
-//    //デバッグ処理
-//    auto func_log = [this](const std::string & message) {
-//        CCLOG("%s log:%s", __PRETTY_FUNCTION__, message.c_str());
-//        if (auto label = dynamic_cast<Label *>(this->getChildByName("label")))
-//        {
-//            label->setString(message);
-//        }
-//    };
-//
-//
-//    if (auto scene = dynamic_cast<PhotonScene *>(this->getParent()))
-//    {
-//        if (auto logic = scene->getNetworkLogic())
-//        {
-//            logic->run();
-//
-//            while (! logic->eventQueue.empty())
-//            {
-//                //std::array<float, 3>
-//                auto arr = logic->eventQueue.front();
-//                logic->eventQueue.pop();
-//
-//
-//                auto playerNr = static_cast<int>(arr[0]);
-//                if (arr[1] == 999)
-//                {
-//                    cocos2dExt::NativeInterface::putTextToWatch("REPLY");
-//                }
-//            }
-//        }
-//    }
 }

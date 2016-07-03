@@ -313,6 +313,18 @@ void NetworkLogic::customEventAction(int playerNr, nByte eventCode, const ExitGa
             break;
         }
 
+        case 3:
+        {
+            {
+                event = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
+                int rep = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+
+                std::array<int, 3> array = {playerNr, 3, rep};
+                this->eventQueue.push(array);
+            }
+            break;
+        }
+
         default:
             break;
     }
