@@ -307,7 +307,7 @@ void NetworkLogic::customEventAction(int playerNr, nByte eventCode, const ExitGa
                 event = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
                 int rep = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
 
-                std::array<int, 3> array = {playerNr, 2, rep};
+                std::array<int, 4> array = {playerNr, 2, rep, 0};
                 this->eventQueue.push(array);
             }
             break;
@@ -319,7 +319,46 @@ void NetworkLogic::customEventAction(int playerNr, nByte eventCode, const ExitGa
                 event = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
                 int rep = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
 
-                std::array<int, 3> array = {playerNr, 3, rep};
+                std::array<int, 4> array = {playerNr, 3, rep, 0};
+                this->eventQueue.push(array);
+            }
+            break;
+        }
+
+        //応援
+        case 4:
+        {
+            {
+                event     = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
+                int posY = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+
+                std::array<int, 4> array = {playerNr, 4, posY};
+                this->eventQueue.push(array);
+            }
+            break;
+        }
+
+        //お祝い
+        case 5:
+        {
+            {
+                event     = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
+                int posY = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+
+                std::array<int, 4> array = {playerNr, 5, posY};
+                this->eventQueue.push(array);
+            }
+            break;
+        }
+
+        //励まし
+        case 6:
+        {
+            {
+                event     = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
+                int posY = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+
+                std::array<int, 4> array = {playerNr, 6, posY};
                 this->eventQueue.push(array);
             }
             break;

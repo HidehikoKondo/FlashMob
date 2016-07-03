@@ -95,6 +95,8 @@ bool HelloWorld::initHelloWorld()
     // create and initialize a label
     if (auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24))
     {
+        label->setVisible(false);
+
         label->setName("label");
 
         auto pos = Vec2::ZERO;

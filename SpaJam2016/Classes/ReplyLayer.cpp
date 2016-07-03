@@ -165,7 +165,7 @@ void ReplyLayer::onEnter()
 
 
 //TEST
-#if (true)
+#if (false)
                     {
                         auto func = [this]() {
                             const std::string list[] = {
@@ -201,7 +201,7 @@ void ReplyLayer::onEnter()
                             visibleRect.size   = Director::getInstance()->getVisibleSize();
                         }
 
-                        pos = cocos2d::Point(visibleRect.getMidX(), visibleRect.getMaxY() - 100.0f);
+                        pos = cocos2d::Point(visibleRect.getMidX(), visibleRect.getMinY() + 50.0f);
                     }
                     menu->setPosition(pos);
 
@@ -291,6 +291,12 @@ void ReplyLayer::onEnter()
                         label->setString("ERROR ?");
                     }
                 }
+
+                if (label)
+                {
+                    cocos2dExt::NativeInterface::speech(label->getString());
+                }
+
 
                 //BGM
                 {
