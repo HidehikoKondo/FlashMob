@@ -36,6 +36,11 @@ protected:
 
 protected:
     //virtual void update(float delta) override;
+
+
+private:
+    void test_message1(const int value, const int value2);
+    void test_message2(const int value, const int value2);
 };
 
 #endif

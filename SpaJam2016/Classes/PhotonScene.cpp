@@ -45,9 +45,9 @@ bool PhotonScene::init()
 
         // add a label shows "Hello World"
         // create and initialize a label
-        if (auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24))
+        if (auto label = Label::createWithSystemFont("", "", 24))
         {
-            label->setVisible(false);
+            //label->setVisible(false);
 
             label->setName("label");
 
@@ -102,19 +102,19 @@ void PhotonScene::update(float delta)
                 // ルームが存在すればジョイン、なければ作成
                 if (logic->isRoomExists())
                 {
-                    func_log("Join");
+                    func_log("接続中");
                     logic->setLastInput(INPUT_2);
                 }
                 else
                 {
-                    func_log("Create");
+                    func_log("接続開始");
                     logic->setLastInput(INPUT_1);
                 }
                 break;
             }
             case (STATE_DISCONNECTED):
             {
-                func_log("Disconnected ... reConnect");
+                func_log("再接続");
                 logic->connect();
                 break;
             }
@@ -127,23 +127,23 @@ void PhotonScene::update(float delta)
 
             case (STATE_JOINING):
             {
-                func_log("Joining ...");
+                func_log("接続処理中 ...");
                 break;
             }
             case (STATE_JOINED):
             {
-                func_log("Joined");
+                func_log("接続");
                 break;
             }
 
             case (STATE_LEAVING):
             {
-                func_log("Leaving ...");
+                func_log("切断 ...");
                 break;
             }
             case (STATE_DISCONNECTING):
             {
-                func_log("Disconnecting ...");
+                func_log("切断 ...");
                 break;
             }
 
@@ -154,7 +154,7 @@ void PhotonScene::update(float delta)
 
         while (! logic->eventQueue.empty())
         {
-            //std::array<float, 3>
+            //std::array<float, 4>
             auto arr = logic->eventQueue.front();
             logic->eventQueue.pop();
 
@@ -164,6 +164,7 @@ void PhotonScene::update(float delta)
                     map["playerNr"] = arr[0];
                     map["event"]    = arr[1];
                     map["value"]    = arr[2];
+                    map["value2"]   = arr[3];
                 }
 
                 auto event = EventCustom(EVENT_NAME__PHOTON_RECIEVE);

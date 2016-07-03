@@ -72,7 +72,7 @@ bool AppDelegate::applicationDidFinishLaunching()
         // Set the design resolution
         glview->setDesignResolutionSize(designResolutionSize.width,
                                         designResolutionSize.height,
-                                        ResolutionPolicy::FIXED_HEIGHT);
+                                        ResolutionPolicy::FIXED_WIDTH);
 
         auto frameSize = glview->getFrameSize();
 
@@ -130,7 +130,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto flag = cocos2dExt::NativeInterface::isWatchSession();
 
 //MEMO: FLAG CHANGE
-    flag = true;
+//    flag = true;
 
     if (flag)
     {

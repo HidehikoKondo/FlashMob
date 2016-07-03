@@ -46,7 +46,7 @@ namespace cocos2dExt
     }
 
     //Apple Watchにつないでいるかどうか
-    bool isWatchSession()
+    bool NativeInterface::isWatchSession()
     {
         return false;
     }

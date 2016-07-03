@@ -114,12 +114,18 @@ bool MobLayer::init()
 
                                 std::random_device rnd;                                 // 非決定的な乱数生成器を生成
                                 std::mt19937 mt(rnd());                                 //  メルセンヌ・ツイスタの32ビット版、引数は初期シード値
-                                std::uniform_int_distribution<> rand_range(0, 20);      // [0, 10] 範囲の一様乱数
+                                std::uniform_int_distribution<> rand_range(2, 18);      // [0, 10] 範囲の一様乱数
+                                std::uniform_int_distribution<> rand_range2(0, 2);      // [0, 2] 範囲の一様乱数
 
-                                eventContent->put<int, int>(1, 1);
-                                eventContent->put<int, int>(2, static_cast<int>(visibleRect.size.height * rand_range(mt)));
+                                int value  = static_cast<int>(visibleRect.size.height * rand_range(mt) * 0.1f);
+                                int value2 = static_cast<int>(rand_range2(mt));
+
+                                eventContent->put<int, int>(1, value);
+                                eventContent->put<int, int>(2, value2);
 
                                 logic->sendEvent(4, eventContent);
+
+                                this->test_message1(value, value2);
                             }
                             delete eventContent;
                         }
@@ -137,11 +143,11 @@ bool MobLayer::init()
                                 visibleRect.origin = Director::getInstance()->getVisibleOrigin();
                                 visibleRect.size   = Director::getInstance()->getVisibleSize();
                             }
-                            
+
                             pos = cocos2d::Point(visibleRect.getMidX(), visibleRect.getMinY() + 50.0f);
                         }
                         menu->setPosition(pos);
-                        
+
                         this->addChild(menu, 100);
                     }
                 }
@@ -195,9 +201,11 @@ void MobLayer::onEnter()
                 CCLOG("playerNr : %d", (*data)["playerNr"].asInt());
                 CCLOG("   event : %d", (*data)["event"].asInt());
                 CCLOG("   value : %d", (*data)["value"].asInt());
+                CCLOG("  value2 : %d", (*data)["value2"].asInt());
 
                 const auto eventId = (*data)["event"].asInt();
                 const auto value   = (*data)["value"].asInt();
+                const auto value2  = (*data)["value"].asInt();
 
                 if (eventId == 3)
                 {
@@ -301,31 +309,15 @@ void MobLayer::onEnter()
 
                 if (eventId == 4)
                 {
-                    const std::string textList[] = {
-                        "wwwwww",
-                        "見てるよww",
-                        "ちょww はやくwwwwww",
-                    };
-
-                    const float fontSizeList[] = {
-                        32.0f,
-                        24.0f,
-                    };
-
-                    const auto count = sizeof(textList)/sizeof(*textList);
-
-
-                    std::random_device rnd;                                     // 非決定的な乱数生成器を生成
-                    std::mt19937 mt(rnd());                                     //  メルセンヌ・ツイスタの32ビット版、引数は初期シード値
-                    std::uniform_int_distribution<> rand_range1(0, sizeof(textList)/sizeof(*textList) - 1);             // テキスト
-                    std::uniform_int_distribution<> rand_range2(0, sizeof(fontSizeList)/sizeof(*fontSizeList) - 1);     // フォントサイズ
-
-                    if (auto label = Label::createWithSystemFont(textList[rand_range1(mt)],
-                                                                 "",
-                                                                 fontSizeList[rand_range2(mt)]))
-                    {
-
-                    }
+                    test_message1(value, value2);
+                }
+                else if (eventId == 5)
+                {
+                    test_message2(value, value2);
+                }
+                else if (eventId == 6)
+                {
+                    test_message1(value, value2);
                 }
             }
         };
@@ -341,4 +333,72 @@ void MobLayer::onEnter()
 void MobLayer::onExit()
 {
     ModalLayer::onExit();
+}
+
+
+
+#pragma mark -
+void MobLayer::test_message1(const int value, const int value2)
+{
+    const std::string textList[] = {
+        "wwwwww",
+        "見てるよww",
+        "ちょww はやくwwwwww",
+    };
+
+    if (auto label = Label::createWithSystemFont(textList[value2],
+                                                 "",
+                                                 32.0f))
+    {
+        label->setAnchorPoint(cocos2d::Point::ANCHOR_MIDDLE_RIGHT);
+        label->setAlignment(TextHAlignment::RIGHT,TextVAlignment::CENTER);
+
+
+        const auto visibleSize = Director::getInstance()->getVisibleSize();
+        const auto pos = cocos2d::Point(0.0f, value);
+
+        label->setPosition(pos);
+
+        this->addChild(label, 150);
+
+        const auto movePos = cocos2d::Point(visibleSize.width + label->getBoundingBox().size.width, 0.0f);
+
+        if (auto action = Sequence::create(MoveBy::create(2.0f, movePos), RemoveSelf::create(), nullptr))
+        {
+            label->runAction(action);
+        }
+    }
+}
+
+
+void MobLayer::test_message2(const int value, const int value2)
+{
+    const std::string textList[] = {
+        "wwやるじゃんwww",
+        "１はワシが育てたww",
+        "おめでとうwwww",
+    };
+
+    if (auto label = Label::createWithSystemFont(textList[value2],
+                                                 "",
+                                                 32.0f))
+    {
+        label->setAnchorPoint(cocos2d::Point::ANCHOR_MIDDLE_RIGHT);
+        label->setAlignment(TextHAlignment::RIGHT,TextVAlignment::CENTER);
+
+
+        const auto visibleSize = Director::getInstance()->getVisibleSize();
+        const auto pos = cocos2d::Point(0.0f, value);
+
+        label->setPosition(pos);
+
+        this->addChild(label, 150);
+
+        const auto movePos = cocos2d::Point(visibleSize.width + label->getBoundingBox().size.width, 0.0f);
+
+        if (auto action = Sequence::create(MoveBy::create(2.0f, movePos), RemoveSelf::create(), nullptr))
+        {
+            label->runAction(action);
+        }
+    }
 }

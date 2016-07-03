@@ -330,9 +330,10 @@ void NetworkLogic::customEventAction(int playerNr, nByte eventCode, const ExitGa
         {
             {
                 event     = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
-                int posY = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+                int posY  = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+                int index = ExitGames::Common::ValueObject<int>(event->getValue(2)).getDataCopy();
 
-                std::array<int, 4> array = {playerNr, 4, posY};
+                std::array<int, 4> array = {playerNr, 4, posY, index};
                 this->eventQueue.push(array);
             }
             break;
@@ -343,9 +344,10 @@ void NetworkLogic::customEventAction(int playerNr, nByte eventCode, const ExitGa
         {
             {
                 event     = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
-                int posY = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+                int posY  = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+                int index = ExitGames::Common::ValueObject<int>(event->getValue(2)).getDataCopy();
 
-                std::array<int, 4> array = {playerNr, 5, posY};
+                std::array<int, 4> array = {playerNr, 5, posY, index};
                 this->eventQueue.push(array);
             }
             break;
@@ -356,9 +358,10 @@ void NetworkLogic::customEventAction(int playerNr, nByte eventCode, const ExitGa
         {
             {
                 event     = ExitGames::Common::ValueObject<ExitGames::Common::Hashtable *>(eventContent).getDataCopy();
-                int posY = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+                int posY  = ExitGames::Common::ValueObject<int>(event->getValue(1)).getDataCopy();
+                int index = ExitGames::Common::ValueObject<int>(event->getValue(2)).getDataCopy();
 
-                std::array<int, 4> array = {playerNr, 6, posY};
+                std::array<int, 4> array = {playerNr, 6, posY, index};
                 this->eventQueue.push(array);
             }
             break;
