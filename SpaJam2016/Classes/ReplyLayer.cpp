@@ -217,42 +217,38 @@ void ReplyLayer::onEnter()
                 auto rep = 0;
                 if (text.compare("REPLYOK") == 0)
                 {
-                    CCLOG("よろこんで!!");
-                    rep = 1;
+                    rep = 3;
 
                     if (label)
                     {
-                        label->setString("OK");
+                        label->setString("よろこんで!!");
                     }
                 }
                 else if (text.compare("REPLYGOOD") == 0)
                 {
-                    CCLOG("まーいっか");
-                    rep = 0;
+                    rep = 2;
 
                     if (label)
                     {
-                        label->setString("NG");
+                        label->setString("まーいっか");
                     }
                 }
                 else if (text.compare("REPLYBAD") == 0)
                 {
-                    CCLOG("ごめんなさい...");
                     rep = 1;
 
                     if (label)
                     {
-                        label->setString("OK");
+                        label->setString("ごめんなさい...");
                     }
                 }
                 else if (text.compare("REPLYNG") == 0)
                 {
-                    CCLOG("無理...");
                     rep = 0;
 
                     if (label)
                     {
-                        label->setString("NG");
+                        label->setString("無理...");
                     }
                 }
                 else
