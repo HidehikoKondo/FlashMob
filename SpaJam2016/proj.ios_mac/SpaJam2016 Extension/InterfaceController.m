@@ -219,13 +219,31 @@
                                                      id aResult = [results objectAtIndex:0];
                                                      NSLog(@"音声入力：%@",(NSString*)aResult);
                                                      
-                                                     if(![aResult isEqualToString:@"いいえ"]){
-                                                         //いいえ以外はOKとする
-                                                         [_messageLabel setText:aResult];
+                                                     
+                                                     bool henji = [aResult isEqualToString:@"お願いします"];
+                                                     
+                                                     NSLog(@"返事：%d　加速度：%f　心拍数：%d", henji, _maxAcceleration, _maxHeartRate);
+                                                     
+                                                     //喜んで　全部◯
+                                                     if(_maxAcceleration > 5.0f && _maxHeartRate > 120 && henji == YES )
+                                                     {
                                                          [self submit:@"REPLYOK"];
-                                                     }else{
-                                                         [_messageLabel setText:aResult];
+                                                         NSLog(@"OK");
+                                                     }else if (_maxAcceleration <= 5.0f && _maxHeartRate > 120 && henji == YES )
+                                                     {
+                                                         [self submit:@"REPLYGOOD"];
+                                                         NSLog(@"GOOD");
+                                                     }else if (_maxAcceleration <= 5.0f && _maxHeartRate <= 120 && henji == YES )
+                                                     {
+                                                         [self submit:@"REPLYBAD"];
+                                                         NSLog(@"BAD");
+                                                     }else if (_maxAcceleration <= 5.0f && _maxHeartRate <= 120 && henji == NO )
+                                                     {
                                                          [self submit:@"REPLYNG"];
+                                                         NSLog(@"NG");
+                                                     }else{
+                                                         [self submit:@"REPLYNG"];
+                                                         NSLog(@"NG");
                                                      }
                                                  }
                                                  else {
