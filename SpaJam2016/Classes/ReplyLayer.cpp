@@ -102,19 +102,33 @@ void ReplyLayer::onEnter()
         this->addChild(label, 1);
     }
 
-
     {
-        auto callback = [this, label](EventCustom * event) {
+        //TEST: 角丸ボタン
+        {
+            auto sprite1 = RoundedBoxSprite::create(cocos2d::Size(300.0f, 50.0f),
+                                                    Color3B(111, 201, 88),
+                                                    10,
+                                                    30,
+                                                    "MEARRY ?",
+                                                    Color3B::WHITE,
+                                                    32.0f);
 
-            if (auto data = static_cast<ValueMap *>(event->getUserData()))
-            {
-//                CCLOG("playerNr : %d", (*data)["playerNr"].asInt());
-//                CCLOG("   event : %d", (*data)["event"].asInt());
-//                CCLOG("   value : %d", (*data)["value"].asInt());
+            auto sprite2 = RoundedBoxSprite::create(cocos2d::Size(300.0f, 50.0f),
+                                                    Color3B(111 - 25, 201 - 25, 88 - 25),
+                                                    10,
+                                                    30,
+                                                    "MEARRY ?",
+                                                    Color3B(255 - 25, 255 - 25, 255 - 25),
+                                                    32.0f);
 
-                const auto eventId = (*data)["event"].asInt();
-                const auto value   = (*data)["value"].asInt();
-                if ((eventId == 2) && (value == 999))
+
+            auto func = [this, label](Ref * pSender) {
+
+                if (auto item = dynamic_cast<MenuItemSprite *>(pSender))
+                {
+                    item->setEnabled(false);
+                }
+
                 {
                     cocos2dExt::NativeInterface::putTextToWatch("REPLY");
 
@@ -123,14 +137,58 @@ void ReplyLayer::onEnter()
                         label->setString("REPLY ... ?");
                     }
                 }
-            }
-        };
+            };
 
-        if (auto listener = EventListenerCustom::create(EVENT_NAME__PHOTON_RECIEVE, callback))
-        {
-            this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+            if (auto item = MenuItemSprite::create(sprite1, sprite2, func))
+            {
+                if (auto menu = Menu::createWithItem(item))
+                {
+                    auto pos = cocos2d::Point::ZERO;
+                    {
+                        auto visibleRect = cocos2d::Rect::ZERO;
+                        {
+                            visibleRect.origin = Director::getInstance()->getVisibleOrigin();
+                            visibleRect.size   = Director::getInstance()->getVisibleSize();
+                        }
+
+                        pos = cocos2d::Point(visibleRect.getMidX(), visibleRect.getMaxY() - 100.0f);
+                    }
+                    menu->setPosition(pos);
+
+                    this->addChild(menu, 100);
+                }
+            }
         }
     }
+
+//    {
+//        auto callback = [this, label](EventCustom * event) {
+//
+//            if (auto data = static_cast<ValueMap *>(event->getUserData()))
+//            {
+////                CCLOG("playerNr : %d", (*data)["playerNr"].asInt());
+////                CCLOG("   event : %d", (*data)["event"].asInt());
+////                CCLOG("   value : %d", (*data)["value"].asInt());
+//
+//                const auto eventId = (*data)["event"].asInt();
+//                const auto value   = (*data)["value"].asInt();
+//                if ((eventId == 2) && (value == 999))
+//                {
+//                    cocos2dExt::NativeInterface::putTextToWatch("REPLY");
+//
+//                    if (label)
+//                    {
+//                        label->setString("REPLY ... ?");
+//                    }
+//                }
+//            }
+//        };
+//
+//        if (auto listener = EventListenerCustom::create(EVENT_NAME__PHOTON_RECIEVE, callback))
+//        {
+//            this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
+//        }
+//    }
 
     {
         auto callback = [this, label](EventCustom * event) {
