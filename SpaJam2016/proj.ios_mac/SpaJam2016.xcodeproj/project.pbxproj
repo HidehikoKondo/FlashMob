@@ -671,7 +671,6 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = UNFXRZ4H42;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 0;
