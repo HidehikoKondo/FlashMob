@@ -121,8 +121,8 @@ void MobLayer::onEnter()
 //                CCLOG("playerNr : %d", (*data)["playerNr"].asInt());
 //                CCLOG("   event : %d", (*data)["event"].asInt());
 //                CCLOG("   value : %d", (*data)["value"].asInt());
-
-                const auto eventId = (*data)["event"].asInt();
+//
+//                const auto eventId = (*data)["event"].asInt();
                 const auto value   = (*data)["value"].asInt();
 
                 //const auto isOK = ((eventId == 3) && (value == 1));
@@ -130,10 +130,10 @@ void MobLayer::onEnter()
                 if (label)
                 {
                     const std::string list[] = {
-                        "OK",
+                        "CONGRATULATIONS !!",
                         "GOOD",
                         "BAD",
-                        "NG",
+                        "OH MY GOD...",
                     };
 
                     const auto count = sizeof(list) / sizeof(*list);
@@ -215,7 +215,7 @@ void MobLayer::onEnter()
                                     }
                                     particle->setPosition(pos);
 
-                                    this->addChild(particle, 100);
+                                    this->addChild(particle, 200);
                                 }
                             }
                         }

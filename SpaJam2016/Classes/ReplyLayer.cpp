@@ -165,7 +165,7 @@ void ReplyLayer::onEnter()
 
 
 //TEST
-#if (false)
+#if (true)
                     {
                         auto func = [this]() {
                             const std::string list[] = {
@@ -175,7 +175,7 @@ void ReplyLayer::onEnter()
                                 "REPLYNG",
                             };
 
-                            const auto index = 1;
+                            const auto index = 0;
                             const auto text = list[index];
                             cocos2dExt::NativeInterface::getTextFromWatch(text);
                         };
@@ -311,6 +311,63 @@ void ReplyLayer::onEnter()
                         CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic(name.c_str());
                     }
                 }
+
+
+                //パーティクル
+                {
+                    const auto name = "particle";
+                    if (auto particle = dynamic_cast<ParticleSystemQuad *>(this->getChildByName(name)))
+                    {
+                        particle->removeFromParentAndCleanup(true);
+                    }
+
+                    //if (index < 2)
+                    {
+                        const std::string paticleList[] = {
+                            "Particle_5.plist",
+                            "",
+                            "",
+                            "Particle_4.plist",
+                        };
+
+                        const auto count = sizeof(paticleList) / sizeof(*paticleList);
+                        const auto index = count - 1 - rep;
+
+                        const auto partileName = paticleList[index];
+                        if (partileName.length() > 0)
+                        {
+                            if (auto particle = ParticleSystemQuad::create(partileName))
+                            {
+                                particle->setName(name);
+                                particle->setAutoRemoveOnFinish(true);
+
+                                auto pos = Vec2::ZERO;
+                                {
+                                    auto visibleRect = cocos2d::Rect::ZERO;
+                                    {
+                                        visibleRect.origin = Director::getInstance()->getVisibleOrigin();
+                                        visibleRect.size   = Director::getInstance()->getVisibleSize();
+                                    }
+
+                                    if (index == 0)
+                                    {
+                                        pos = Vec2(visibleRect.getMidX(), visibleRect.getMaxY());
+                                        pos += Vec2(0.0f, 100.0f);
+                                    }
+                                    else if (index == (sizeof(paticleList)/sizeof(*paticleList) - 1))
+                                    {
+                                        pos = Vec2(visibleRect.getMidX(), visibleRect.getMidY());
+                                        //pos += Vec2(0.0f, 100.0f);
+                                    }
+                                }
+                                particle->setPosition(pos);
+
+                                this->addChild(particle, 200);
+                            }
+                        }
+                    }
+                }
+
 
                 //みんなに通知
                 //Photon
